@@ -1,7 +1,7 @@
 import { Container, Divider } from "@mui/material";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
-import { ContainerStyle, LayoutStyle } from "./styles";
+import { ContainerStyle } from "./styles";
 
 const DefaultLayout = () => {
   return (

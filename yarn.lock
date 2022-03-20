@@ -1630,21 +1630,6 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@rsuite/icon-font@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@rsuite/icon-font/-/icon-font-4.0.0.tgz#c4a772af5020bb3bbf74761879f80da23e914123"
-  integrity sha512-rZTgpTH3H3HLczCA2rnkWfoMKm0ZXoRzsrkVujfP/FfslnKUMvO6w56pa8pCvhWGpNEPUsLS2ULnFGpTEcup/Q==
-
-"@rsuite/icons@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@rsuite/icons/-/icons-1.0.2.tgz#1b53f6e5dc1dabec7a40ac5773ecc2172f05d09e"
-  integrity sha512-Y7vJNDQpJnFlyYSUXQ2iQ9Meg7+ZKcrIenhpYDdM3c7vYDE/L7pml+hrK28jk6QfV/QkVv5B504D+l7aM6AAJQ==
-  dependencies:
-    "@rsuite/icon-font" "^4.0.0"
-    classnames "^2.2.5"
-    insert-css "^2.0.0"
-    lodash "^4.17.20"
-
 "@rushstack/eslint-patch@^1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.1.tgz#782fa5da44c4f38ae9fd38e9184b54e451936118"
@@ -3108,11 +3093,6 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
-
-classnames@^2.2.5:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
-  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@^5.2.2:
   version "5.2.4"
@@ -5012,11 +4992,6 @@ ini@^1.3.5:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
-
-insert-css@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-2.0.0.tgz#eb5d1097b7542f4c79ea3060d3aee07d053880f4"
-  integrity sha1-610Ql7dUL0x56jBg067gfQU4gPQ=
 
 internal-slot@^1.0.3:
   version "1.0.3"
