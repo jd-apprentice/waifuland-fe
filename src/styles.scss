@@ -1,0 +1,61 @@
+// Imports
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// Global
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #a72b2b;
+}
+
+// Core colors
+$white: #e9e3e3;
+$danger: #a72b2b;
+$dark: #181818;
+
+// Other colors
+$page-bg-color: $danger;
+$sidebar-color: $dark;
+
+// Write your own styles here
+
+// Layout
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.layout-style {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 40px;
+}
+
+// Overwrite the MUI Components here
+// Sidebar
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  background-color: $sidebar-color !important;
+  color: $white !important;
+}
+
+// Icons Sidebar
+.css-cveggr-MuiListItemIcon-root {
+  color: $white !important;
+}
