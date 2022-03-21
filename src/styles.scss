@@ -48,6 +48,13 @@ $sidebar-color: $dark;
   font-size: 40px;
 }
 
+// Image
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 // Overwrite the MUI Components here
 // Sidebar
 .MuiDrawer-paper {

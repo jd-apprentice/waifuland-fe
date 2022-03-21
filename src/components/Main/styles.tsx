@@ -1,10 +1,17 @@
 const ContainerStyle = {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignSelf: "center",
   textAlign: "center",
   fontSize: 40,
   paddingTop: "1rem",
+};
+
+const PresentationContainer = {
+  display: "flex",
+  flexDirection: "row",
+  fontSize: 40,
+  padding: "1rem",
 };
 
 const LayoutStyle = {
@@ -14,4 +21,4 @@ const LayoutStyle = {
   justifyContent: "center",
 };
 
-export { ContainerStyle, LayoutStyle };
+export { ContainerStyle, LayoutStyle, PresentationContainer };
