@@ -10,17 +10,22 @@ import HomeIcon from "@mui/icons-material/Home";
 import BookIcon from "@mui/icons-material/Book";
 import ImageIcon from "@mui/icons-material/Image";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListSidebar = () => {
+  const navigate = useNavigate();
+  const navigateToHome = () => navigate("/");
+  const navigateToDocs = () => navigate("/docs");
+
   return (
     <List>
-      <ListItem button>
+      <ListItem button onClick={navigateToHome}>
         <ListItemIcon>
           <HomeIcon />
         </ListItemIcon>
         <ListItemText primary={"Home"} />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={navigateToDocs}>
         <ListItemIcon>
           <BookIcon />
         </ListItemIcon>
@@ -65,7 +70,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <MenuIcon onClick={toggleDrawer(true)} />
+      <MenuIcon className="headerIcon" onClick={toggleDrawer(true)} />
       <Drawer
         className="backgroundColor-black"
         open={state}
