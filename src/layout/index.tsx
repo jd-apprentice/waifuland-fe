@@ -1,27 +1,15 @@
 import { Divider } from "@mui/material";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
-import Main from "components/Main/Main";
-import { useEffect, useState } from "react";
-import api from "services/api";
 
-const DefaultLayout = () => {
-  const [waifu, setWaifu] = useState();
-
-  useEffect(() => {
-    api.waifuApi.getWaifu().then((waifus) => {
-      setWaifu(waifus.url);
-    });
-  }, []);
+const DefaultLayout = ({ route }: any) => {
   return (
     <>
       <div className="wrapper">
         <div>
           <Header />
         </div>
-        <div>
-          <Main data={waifu} />
-        </div>
+        <div>{route}</div>
         <Divider sx={{ margin: 3 }} flexItem />
         <div>
           <Footer />

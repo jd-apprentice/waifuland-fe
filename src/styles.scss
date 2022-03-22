@@ -1,5 +1,6 @@
 // Imports
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neucha&display=swap"); // This one for now
 
 // Global
 body {
@@ -7,6 +8,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #a72b2b;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Neucha", cursive;
 }
 
 // Core colors
@@ -43,9 +46,19 @@ $sidebar-color: $dark;
 
 .footer {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 40px;
+}
+
+.footer-repo {
+  display: flex;
+  place-items: center;
+}
+
+.headerIcon {
+  cursor: pointer;
 }
 
 // Image
