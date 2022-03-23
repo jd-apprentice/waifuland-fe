@@ -21,6 +21,10 @@ $dark: #181818;
 $page-bg-color: $danger;
 $sidebar-color: $dark;
 
+// Media queries
+
+$mobile: 768px;
+
 // Write your own styles here
 
 // Layout
@@ -50,6 +54,10 @@ $sidebar-color: $dark;
   align-items: center;
   flex-direction: row;
   font-size: 40px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 20px;
+  }
 }
 
 .footer-repo {
@@ -66,6 +74,13 @@ $sidebar-color: $dark;
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.image-list {
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 4px !important;
+  }
 }
 
 // Overwrite the MUI Components here
