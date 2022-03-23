@@ -1,14 +1,17 @@
 import * as React from "react";
 import Link from "@mui/material/Link";
+import { useNavigate } from "react-router-dom";
 
 const ButtonLink = () => {
+  let navigate = useNavigate();
+
   return (
     <Link
-      sx={{ fontSize: 35 }}
+      sx={{ fontSize: 35, textDecoration: "none", color: "white" }}
       component="button"
       variant="body2"
       onClick={() => {
-        console.info("I'm a button.");
+        navigate("/docs");
       }}
     >
       Documentacion

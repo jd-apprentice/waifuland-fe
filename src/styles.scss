@@ -1,5 +1,6 @@
 // Imports
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neucha&display=swap"); // This one for now
 
 // Global
 body {
@@ -7,6 +8,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #a72b2b;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Neucha", cursive;
 }
 
 // Core colors
@@ -17,6 +20,10 @@ $dark: #181818;
 // Other colors
 $page-bg-color: $danger;
 $sidebar-color: $dark;
+
+// Media queries
+
+$mobile: 768px;
 
 // Write your own styles here
 
@@ -43,9 +50,23 @@ $sidebar-color: $dark;
 
 .footer {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 40px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 20px;
+  }
+}
+
+.footer-repo {
+  display: flex;
+  place-items: center;
+}
+
+.headerIcon {
+  cursor: pointer;
 }
 
 // Image
@@ -53,6 +74,13 @@ $sidebar-color: $dark;
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.image-list {
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 4px !important;
+  }
 }
 
 // Overwrite the MUI Components here
