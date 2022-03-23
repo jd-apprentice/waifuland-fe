@@ -16,6 +16,7 @@ const ListSidebar = () => {
   const navigate = useNavigate();
   const navigateToHome = () => navigate("/");
   const navigateToDocs = () => navigate("/docs");
+  const navigateToImages = () => navigate("/images");
 
   return (
     <List>
@@ -31,7 +32,7 @@ const ListSidebar = () => {
         </ListItemIcon>
         <ListItemText primary={"Documentation"} />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={navigateToImages}>
         <ListItemIcon>
           <ImageIcon />
         </ListItemIcon>
