@@ -1,11 +1,12 @@
 import DefaultLayout from "layout";
+import Doc from "components/Doc/index";
 
-const Docs = () => {
+const DocsView = () => {
   return (
     <>
-      <DefaultLayout />
+      <DefaultLayout route={<Doc />} />
     </>
   );
 };
 
-export default Docs;
+export default DocsView;
