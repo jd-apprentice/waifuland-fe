@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Docs, Home } from "views";
+import { Home } from "views";
+import DocsView from "views/docs";
 import ImagesView from "views/images";
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/docs" element={<Docs />} />
+        <Route path="/docs" element={<DocsView />} />
         <Route path="/images" element={<ImagesView />} />
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
