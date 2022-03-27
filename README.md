@@ -18,6 +18,6 @@
 - Typescript
 - Mui
 - Sass
-- Verce
+- Vercel
 - Apisauce
 - Mobx-state-tree
