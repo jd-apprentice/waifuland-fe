@@ -12,7 +12,7 @@ const Home = () => {
     });
   }, []);
 
-  return <DefaultLayout route={<Main data={waifu} />} />;
+  return <DefaultLayout route={<Main data={waifu!} />} children={undefined} />;
 };
 
 export default Home;

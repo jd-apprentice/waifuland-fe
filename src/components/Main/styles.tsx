@@ -1,4 +1,10 @@
-const ContainerStyle = {
+import {
+  IContainerStyleProps,
+  ILayoutStyle,
+  IPresentationContainerProps,
+} from "models/types";
+
+const ContainerStyle: IContainerStyleProps = {
   display: "flex",
   flexDirection: "row",
   alignSelf: "center",
@@ -7,14 +13,14 @@ const ContainerStyle = {
   paddingTop: "1rem",
 };
 
-const PresentationContainer = {
+const PresentationContainer: IPresentationContainerProps = {
   display: "flex",
   flexDirection: "row",
   fontSize: 40,
   padding: "1rem",
 };
 
-const LayoutStyle = {
+const LayoutStyle: ILayoutStyle = {
   flex: 1,
   display: "flex",
   flexDirection: "column",

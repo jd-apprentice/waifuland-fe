@@ -1,8 +1,9 @@
 import { Divider } from "@mui/material";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
+import { ILayoutProps, RouteProps } from "models/types";
 
-const DefaultLayout = ({ route }: any) => {
+const DefaultLayout: React.FC<ILayoutProps> = ({ route }: RouteProps) => {
   return (
     <>
       <div className="wrapper">
