@@ -2,8 +2,9 @@ import { Box, Container, Divider } from "@mui/material";
 import ImageIcon from "@mui/icons-material/Image";
 import ButtonLink from "components/common/Link";
 import { ContainerStyle, PresentationContainer } from "./styles";
+import { IImageProps } from "models/types";
 
-const Main = ({ data }: any) => {
+const Main: React.FC<IImageProps> = ({ data }: IImageProps) => {
   return (
     <div className="layout-style">
       <Container sx={{ ...PresentationContainer }}>

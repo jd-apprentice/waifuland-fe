@@ -1,8 +1,9 @@
 import * as React from "react";
 import Link from "@mui/material/Link";
 import { useNavigate } from "react-router-dom";
+import { ILinkProps } from "models/types";
 
-const ButtonLink = () => {
+const ButtonLink: React.FC<ILinkProps> = () => {
   let navigate = useNavigate();
 
   return (
