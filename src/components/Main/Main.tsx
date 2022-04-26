@@ -7,15 +7,17 @@ const Main = ({ data }: any) => {
   return (
     <div className="layout-style">
       <Container sx={{ ...PresentationContainer }}>
-        <span style={{ alignSelf: "center" }}>
-          Bienvenidos a Waifuland, tu api para utilizar imagenes de waifus en
-          diversos tamaños, cantidades y mas.
+        <span style={{ alignSelf: "center", fontSize: 50 }}>
+          Bienvenidos a Waifuland, tu api para utilizar imagenes de waifus
+          <br /> en diversos tamaños, cantidades y mas.
         </span>
         <Box
           sx={{
-            maxWidth: 550,
-            maxHeight: 550,
-            borderRadius: 20,
+            maxWidth: 400,
+            maxHeight: 600,
+            minWidth: 200,
+            minHeight: 200,
+            borderRadius: 5,
           }}
           component="img"
           className="img-fluid"
@@ -25,8 +27,8 @@ const Main = ({ data }: any) => {
       </Container>
       <Divider flexItem />
       <Container sx={{ ...ContainerStyle }}>
-        <ImageIcon sx={{ fontSize: 300 }} />
-        <span style={{ alignSelf: "center" }}>
+        <ImageIcon sx={{ fontSize: 200 }} />
+        <span style={{ alignSelf: "center", marginBottom: "10px" }}>
           Se iran agregando mas imagenes de waifus, por el momento solo tenemos
           una cantidad limitada de imagenes, pero pronto estaremos agregando mas
           imagenes.

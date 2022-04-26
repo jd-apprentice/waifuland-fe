@@ -1,12 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const markdown = `## 🗒 About the project
-
-- The project is a API-REST which gives random waifu images, they are uploaded to cloudinary and their public url is stored in mongodb
-- There is no real purpose on this project, just for learning
-- Learning throught documentation
-
+const markdown = `
 ## 🚧 Routes
 
 - GET Grab a random image api/images
@@ -19,21 +14,6 @@ const markdown = `## 🗒 About the project
 ## 🌐 Can I use the api?
 
 - Yes! is currently being hosted in heroku [Get waifu](https://waifuland-api.herokuapp.com/api/images)
-
-## 📚 Stack
-
-- React
-- TypeScript
-- Sass
-- Mui
-- Nodejs
-- Express
-- Typescript
-- Multer
-- Cloudinary
-- Heroku
-- Mongodb
-- Mongoose
 `;
 
 const Doc = () => {
@@ -44,7 +24,7 @@ const Doc = () => {
         justifyContent: "center",
         flexDirection: "column",
         placeItems: "center",
-        fontSize: 20,
+        fontSize: 30,
       }}
     >
       <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
