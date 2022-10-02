@@ -14,10 +14,7 @@
 
 - React
 - React Router
-- React Markdown
+- Chakra UI
 - Typescript
-- Mui
-- Sass
 - Vercel
 - Apisauce
-- Mobx-state-tree

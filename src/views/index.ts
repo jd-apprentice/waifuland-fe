@@ -1,4 +1,2 @@
-import Home from './home/index';
-import Docs from './docs/index';
-
-export { Home, Docs };
+export * from "./home/index";
+export * from "./docs/index";

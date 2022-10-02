@@ -9,11 +9,6 @@ export class WaifuApi {
     this.api = api;
   }
 
-  /**
-   * Get a random of waifu.
-   * @returns {Promise<any>}
-   */
-
   async getWaifu(): Promise<any> {
     try {
       const response: ApiResponse<never> = await this.api.apisauce.get(
@@ -32,7 +27,8 @@ export class WaifuApi {
   }
 
   /**
-   * Get a list of waifus.
+   * @description Get a list of waifus.
+   * @param { number } size - The amount of images to retrieve
    * @returns {Promise<any>}
    */
 
