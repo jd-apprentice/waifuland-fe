@@ -36,7 +36,6 @@ export const Home: React.FC = (): React.ReactElement => {
           onClick={() => obtainWaifu().then((waifu) => setWaifu(waifu))}
         />
       }
-      children={undefined}
     />
   );
 };
