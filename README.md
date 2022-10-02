@@ -14,9 +14,7 @@
 
 - React
 - React Router
-- React Markdown
-- React Context
+- Chakra UI
 - Typescript
-- Digital Ocean
 - Vercel
 - Apisauce
