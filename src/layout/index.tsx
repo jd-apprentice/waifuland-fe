@@ -1,21 +1,20 @@
-import { Divider } from "@mui/material";
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
-import { ILayoutProps, RouteProps } from "models/types";
+import { Box } from "@chakra-ui/react";
+import Footer from "layout/footer";
+import Header from "layout/header";
+import { RouteProps } from "models/types";
 
-const DefaultLayout: React.FC<ILayoutProps> = ({ route }: RouteProps) => {
+const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
   return (
     <>
-      <div className="wrapper">
-        <div>
+      <Box>
+        <Box>
           <Header />
-        </div>
-        <div>{route}</div>
-        <Divider sx={{ margin: 3 }} flexItem />
-        <div>
+        </Box>
+        <Box>{route}</Box>
+        <Box>
           <Footer />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 };

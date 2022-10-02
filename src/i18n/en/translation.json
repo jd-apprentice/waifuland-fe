@@ -1,0 +1,13 @@
+{
+    "home": {
+        "first-text": "👨‍💻 Website is under construction... 🛠️",
+        "second-text": "Welcome to Waifuland, your api for using waifus images in various sizes, quantities and more.",
+        "third-text": "More waifus images will be added, at the moment we only have a limited number of images, but soon you will be able to upload your own images.",
+        "fourth-text": "We have a documentation available, you can visit it here"
+    },
+    "documentation": {
+        "title": "👨‍💻 Website is under construction... 🛠️",
+        "routes": "🚧 Routes to interact with the api 🚧",
+        "button": "Documentation"
+    }
+}

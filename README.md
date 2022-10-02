@@ -15,9 +15,8 @@
 - React
 - React Router
 - React Markdown
+- React Context
 - Typescript
-- Mui
-- Sass
+- Digital Ocean
 - Vercel
 - Apisauce
-- Mobx-state-tree
