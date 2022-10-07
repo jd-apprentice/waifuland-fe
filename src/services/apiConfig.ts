@@ -1,10 +1,4 @@
-declare global {
-  interface Window {
-    config: Record<string, string>;
-  }
-}
-const BASE_URL = process.env.BASE_URL;
-const API_URL = BASE_URL || window.config.apiBaseUrl;
+const BASE_URL = process.env.BASE_URL || "http://localhost:4000/api";
 
 /**
  * The options used to configure the API.
@@ -25,6 +19,6 @@ export interface ApiConfig {
  * The default configuration for the app.
  */
 export const DEFAULT_API_CONFIG: ApiConfig = {
-  url: API_URL,
+  url: BASE_URL,
   timeout: 10000,
 };
