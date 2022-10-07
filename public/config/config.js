@@ -1,4 +1,4 @@
 var config = {
-    apiBaseUrl: 'https://waifuland-api.herokuapp.com/api/',
+    apiBaseUrl: 'https://waifuland-api.onrender.com/api/',
 }
 window.config = config;

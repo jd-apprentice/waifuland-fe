@@ -3,7 +3,7 @@ declare global {
     config: Record<string, string>;
   }
 }
-const BASE_URL = "https://waifuland-api.herokuapp.com/api/"
+const BASE_URL = "https://waifuland-api.onrender.com/api/"
 const API_URL = BASE_URL || window.config.apiBaseUrl;
 
 /**
