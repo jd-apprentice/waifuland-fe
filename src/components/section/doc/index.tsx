@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Code, Heading, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { documentationText } from "const";
 import { CodeBox } from "components/common/codeBox";
@@ -36,6 +36,16 @@ export const Doc = () => {
             endpoint={item.endpoint}
           />
         ))}
+        <Text
+          fontSize={{ base: "20px", md: "25px", lg: "30px" }}
+          fontFamily="cursive"
+          mt={1}
+        >
+          Base URL is{" "}
+          <Code fontSize={{ base: "10px", md: "15px", lg: "20px" }}>
+            https://waifuland.jonathan.com.ar
+          </Code>
+        </Text>
       </Box>
     </>
   );
