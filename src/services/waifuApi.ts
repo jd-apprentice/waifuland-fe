@@ -75,8 +75,7 @@ export class WaifuApi {
       }
 
       const { data } = response;
-      // @ts-ignore
-      return data?.urls;
+      return data;
     } catch (e) {
       return { kind: "bad-data" };
     }
