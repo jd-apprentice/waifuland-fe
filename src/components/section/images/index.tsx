@@ -2,6 +2,7 @@ import { Heading, Box, SimpleGrid } from "@chakra-ui/react";
 import { ImagesProps } from "models/types";
 import { Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import SelectBox from "components/common/select";
 
 const ImagesStyles = {
   display: "flex",
@@ -9,7 +10,7 @@ const ImagesStyles = {
   m: 3,
 };
 
-export const Images = ({ images }: ImagesProps) => {
+export const Images = ({ images, tags, onChange }: ImagesProps) => {
   const { t } = useTranslation();
   return (
     <>
@@ -19,15 +20,12 @@ export const Images = ({ images }: ImagesProps) => {
         </Heading>
       </Box>
       <Box p={1}>
-        <SimpleGrid minChildWidth="250px" p={1} spacing={1}>
+        <SelectBox options={tags} onChange={onChange} />
+        <SimpleGrid minChildWidth="250px">
           {images &&
             images.map((image: { url: string | undefined }) => (
               <Box>
                 <Image
-                  my={1}
-                  border="1px"
-                  borderRadius="inherit"
-                  borderColor="red.200"
                   objectFit="cover"
                   onClick={() => window.open(image.url)}
                   alt="Waifu"

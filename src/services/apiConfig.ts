@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:4000/api";
+const BASE_URL = window.config.baseURL;
 
 /**
  * The options used to configure the API.
