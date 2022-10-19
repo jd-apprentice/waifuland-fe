@@ -22,3 +22,5 @@ export const documentationText = {
     endpoint: "api/images?tag_id=<TagId>",
   },
 };
+
+export const waifusPerFetch = 8;

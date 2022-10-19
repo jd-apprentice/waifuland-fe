@@ -1,29 +1,59 @@
 import { Images } from "components/section/images";
+import { waifusPerFetch } from "const";
 import DefaultLayout from "layout/index";
-import { IImage } from "models/types";
+import { IImage, Tag } from "models/types";
 import { useEffect, useState } from "react";
 import api from "services/api";
 
 const ImagesView = () => {
-  const [waifu, setWaifu] = useState<IImage[]>();
-  const [isLoading, setLoading] = useState<boolean>(true);
-  const obtainWaifu = async () => {
+  const [waifu, setWaifu] = useState<IImage[]>(); // Array of images
+  const [tags, setTags] = useState<Tag[]>([]); // Array of tags
+  // Get waifus
+  const obtainWaifu = async (amount: number, tag_id?: number) => {
     try {
-      setLoading(true);
-      const image = await api.waifuApi.getWaifus(20);
-      setLoading(false);
+      const image = await api.waifuApi.getWaifus(amount, tag_id);
       return image;
     } catch (error) {
-      setLoading(true);
+      console.log(error);
+    }
+  };
+  // Get tags
+  const obtainTags = async () => {
+    try {
+      const tags = await api.waifuApi.getTags();
+      return tags;
+    } catch (error) {
+      console.log(error);
     }
   };
 
   useEffect(() => {
-    obtainWaifu().then((waifus) => {
+    obtainWaifu(waifusPerFetch).then((waifus) => {
       setWaifu(waifus);
     });
   }, []);
-  return <DefaultLayout route={<Images images={waifu} />} />;
+
+  useEffect(() => {
+    obtainTags().then((tag) => {
+      setTags(tag);
+    });
+  }, []);
+
+  return (
+    <DefaultLayout
+      route={
+        <Images
+          onChange={async (e) =>
+            await obtainWaifu(waifusPerFetch, +e.target.value).then((waifus) =>
+              setWaifu(waifus)
+            )
+          }
+          tags={tags}
+          images={waifu}
+        />
+      }
+    />
+  );
 };
 
 export default ImagesView;

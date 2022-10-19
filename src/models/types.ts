@@ -28,9 +28,12 @@ export interface IImage {
 
 export interface ImagesProps {
   images?: IImage[];
+  tags?: Tag[];
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-interface Tag {
+export interface Tag {
+  [x: string]: any;
   name: string;
   tag_id: number;
   description: string;
