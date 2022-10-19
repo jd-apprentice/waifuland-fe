@@ -25,7 +25,7 @@ const Header: React.FC = (): React.ReactElement => {
       </Link>
       <Avatar
         name="Jonathan"
-        src="https://pbs.twimg.com/profile_images/1578984263797690369/ULCNcS_-_400x400.jpg"
+        src="https://cdn.discordapp.com/attachments/610338409671557121/1032420671122313237/Profile_Picture_1_1.png"
       />
     </Box>
   );

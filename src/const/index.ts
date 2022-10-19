@@ -23,4 +23,4 @@ export const documentationText = {
   },
 };
 
-export const waifusPerFetch = 12;
+export const waifusPerFetch = 8;
