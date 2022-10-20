@@ -1,7 +1,7 @@
-import { Main } from "components/section/home";
-import DefaultLayout from "layout/index";
+import { Main } from "../../components/section/home";
+import DefaultLayout from "../../layout/index";
 import { useEffect, useState } from "react";
-import api from "services/api";
+import api from "../../services/api";
 
 export const Home: React.FC = (): React.ReactElement => {
   const [waifu, setWaifu] = useState<string | undefined>();

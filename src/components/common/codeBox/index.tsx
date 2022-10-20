@@ -1,5 +1,5 @@
 import { Text, Code } from "@chakra-ui/react";
-import { CodeBoxProps } from "models/types";
+import { CodeBoxProps } from "../../../models/types";
 import React from "react";
 
 /**

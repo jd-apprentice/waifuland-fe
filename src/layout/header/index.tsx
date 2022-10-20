@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Avatar, Box, Link, Text } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
-import SimpleDrawer from "components/common/drawer";
+import SimpleDrawer from "../../components/common/drawer";
 
 const Header: React.FC = (): React.ReactElement => {
   const { pathname } = useLocation();
