@@ -1,11 +1,11 @@
-import { Images } from "components/section/images";
-import { waifusPerFetch } from "const";
-import DefaultLayout from "layout/index";
-import { IImage, Tag } from "models/types";
+import { Images } from "../../components/section/images";
+import { waifusPerFetch } from "../../const";
+import DefaultLayout from "../../layout/index";
+import { IImage, Tag } from "../../models/types";
 import { useEffect, useState } from "react";
-import api from "services/api";
+import api from "../../services/api";
 
-const ImagesView = () => {
+export const ImagesView = () => {
   const [waifu, setWaifu] = useState<IImage[]>(); // Array of images
   const [tags, setTags] = useState<Tag[]>([]); // Array of tags
   // Get waifus
@@ -43,7 +43,7 @@ const ImagesView = () => {
     <DefaultLayout
       route={
         <Images
-          onChange={async (e) =>
+          onChange={async (e: { target: { value: string | number } }) =>
             await obtainWaifu(waifusPerFetch, +e.target.value).then((waifus) =>
               setWaifu(waifus)
             )
@@ -55,5 +55,3 @@ const ImagesView = () => {
     />
   );
 };
-
-export default ImagesView;

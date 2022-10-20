@@ -1,8 +1,8 @@
 import { Heading, Box, SimpleGrid } from "@chakra-ui/react";
-import { ImagesProps } from "models/types";
+import { ImagesProps } from "../../../models/types";
 import { Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import SelectBox from "components/common/select";
+import SelectBox from "../../../components/common/select";
 
 const ImagesStyles = {
   display: "flex",
