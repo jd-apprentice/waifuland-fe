@@ -1,7 +1,7 @@
 import { Box, Code, Heading, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { documentationText } from "const";
-import { CodeBox } from "components/common/codeBox";
+import { documentationText } from "../../../const";
+import { CodeBox } from "../../../components/common/codeBox";
 
 const DocStyles = {
   display: "flex",
