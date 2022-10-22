@@ -44,8 +44,8 @@ export const ImagesView = () => {
       route={
         <Images
           onChange={async (e: { target: { value: string | number } }) =>
-            await obtainWaifu(waifusPerFetch, +e.target.value).then((waifus) =>
-              setWaifu(waifus)
+            await obtainWaifu(waifusPerFetch, +e.target.value).then(
+              (waifus: IImage[]) => setWaifu(waifus)
             )
           }
           tags={tags}
