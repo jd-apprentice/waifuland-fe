@@ -23,9 +23,10 @@ export const Images = ({ images, tags, onChange }: ImagesProps) => {
         <SelectBox options={tags} onChange={onChange} />
         <SimpleGrid minChildWidth="250px">
           {images &&
-            images.map((image: { url: string | undefined }) => (
+            images.map((image: { url: string | undefined }, index) => (
               <Box>
                 <Image
+                  key={index}
                   objectFit="cover"
                   onClick={() => window.open(image.url)}
                   alt="Waifu"

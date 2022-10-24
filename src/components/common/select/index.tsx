@@ -11,8 +11,10 @@ const SelectBox = ({ options, onChange }: SelectProps) => {
     <Box mb={1}>
       <Select onChange={onChange} defaultValue={1}>
         {options &&
-          options.map((option) => (
-            <option value={option.tag_id}>{option.name}</option>
+          options.map((option, index) => (
+            <option key={index} value={option.tag_id}>
+              {option.name}
+            </option>
           ))}
       </Select>
     </Box>

@@ -1,6 +1,7 @@
 import { ApisauceInstance, create } from "apisauce";
 import { ApiConfig, DEFAULT_API_CONFIG } from "./apiConfig";
-import { WaifuApi } from "./waifuApi";
+import { WaifuApi } from "../waifu";
+import { UserApi } from "../user";
 
 /**
  * Manages all requests to the API.
@@ -10,6 +11,12 @@ export class Api {
    * The underlying apisauce instance which performs the requests.
    */
   apisauce!: ApisauceInstance;
+
+  /**
+   * @param token The token to use for authentication.
+   */
+
+  token!: string;
 
   /**
    * Configurable options.
@@ -23,6 +30,23 @@ export class Api {
    */
   constructor(config: ApiConfig = DEFAULT_API_CONFIG) {
     this.config = config;
+  }
+
+  /**
+   * @description Removes token from header
+   */
+
+  removeToken() {
+    this.apisauce.deleteHeader("Authorization");
+  }
+
+  /**
+   * @description Sets up the API with a token
+   * @param token - token to be set in header
+   */
+
+  setToken(token: string) {
+    this.apisauce.setHeader("Authorization", "Bearer " + token);
   }
 
   /**
@@ -46,6 +70,7 @@ baseApi.setup();
 const api = {
   api: baseApi,
   waifuApi: new WaifuApi(baseApi),
+  userApi: new UserApi(baseApi),
 };
 
 export default api;

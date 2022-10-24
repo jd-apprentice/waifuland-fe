@@ -1,7 +1,8 @@
-import { Main } from "../../components/section/home";
+import { Main } from "../../components";
 import DefaultLayout from "../../layout/index";
 import { useEffect, useState } from "react";
-import api from "../../services/api";
+import api from "../../services/base/api";
+import { useCheckToken } from "../../hooks/checkToken";
 
 export const Home: React.FC = (): React.ReactElement => {
   const [waifu, setWaifu] = useState<string | undefined>();
@@ -19,6 +20,10 @@ export const Home: React.FC = (): React.ReactElement => {
       setLoading(true);
     }
   };
+
+  useEffect(() => {
+    useCheckToken();
+  }, [api.api.token]);
 
   useEffect(() => {
     obtainWaifu().then((waifus) => {

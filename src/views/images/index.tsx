@@ -1,9 +1,10 @@
-import { Images } from "../../components/section/images";
+import { Images } from "../../components";
 import { waifusPerFetch } from "../../const";
 import DefaultLayout from "../../layout/index";
 import { IImage, Tag } from "../../models/types";
 import { useEffect, useState } from "react";
-import api from "../../services/api";
+import api from "../../services/base/api";
+import { useCheckToken } from "../../hooks/checkToken";
 
 export const ImagesView = () => {
   const [waifu, setWaifu] = useState<IImage[]>(); // Array of images
@@ -26,6 +27,10 @@ export const ImagesView = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    useCheckToken();
+  }, [api.api.token]);
 
   useEffect(() => {
     obtainWaifu(waifusPerFetch).then((waifus) => {
