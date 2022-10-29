@@ -7,7 +7,7 @@ import api from "../services/base/api";
  */
 
 export const useCheckToken = (): boolean => {
-  const token = sessionStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
   if ((api.api.token && api.api.token !== "") ?? (token && token !== "")) {
     api.api.apisauce.headers.Authorization = `Bearer ${api.api.token ?? token}`;
