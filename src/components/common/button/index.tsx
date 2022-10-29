@@ -19,6 +19,10 @@ export const SubmitButton: React.FC<ButtonProps> = ({
 }: ButtonProps): React.ReactElement<ButtonProps> => {
   return (
     <Button
+      mt={2}
+      size="lg"
+      border="2px"
+      borderColor="red.200"
       isLoading={isLoading}
       loadingText={loadingText}
       colorScheme={color}

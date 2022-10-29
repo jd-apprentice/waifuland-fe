@@ -35,8 +35,14 @@ export const Login = ({
   }, [username, password]);
 
   return (
-    <>
-      <FormControl textAlign="center" p={3} onSubmit={onSubmit} isRequired>
+    <Box m={10} display="flex" justifyContent="center" borderRadius="initial">
+      <FormControl
+        w={{ base: "100%", md: "50%", lg: "30%" }}
+        m={10}
+        textAlign="center"
+        onSubmit={onSubmit}
+        isRequired
+      >
         <Box>
           <FormLabel>Username</FormLabel>
           <BasicInput onChange={(e) => setUsername(e.target.value)} />
@@ -46,9 +52,9 @@ export const Login = ({
           <PasswordInput onChange={(e) => setPassword(e.target.value)} />
         </Box>
         <Box>
-          <SubmitButton onClick={onClick} text="Log in" />
+          <SubmitButton color="black" onClick={onClick} text="Log in" />
         </Box>
       </FormControl>
-    </>
+    </Box>
   );
 };

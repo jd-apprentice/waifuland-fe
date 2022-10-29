@@ -1,7 +1,10 @@
 import * as React from "react";
-import { Avatar, Box, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 import SimpleDrawer from "../../components/common/drawer";
+import { MenuProfile } from "../../components/common/menu";
+import { useCheckToken } from "../../hooks/checkToken";
+import { useLogout } from "../../hooks/logout";
 
 const Header: React.FC = (): React.ReactElement => {
   const { pathname } = useLocation();
@@ -16,6 +19,7 @@ const Header: React.FC = (): React.ReactElement => {
       justifyContent="space-between"
       position="sticky"
       alignItems="center"
+      p={2}
     >
       <SimpleDrawer />
       <Link href={isHome}>
@@ -23,10 +27,14 @@ const Header: React.FC = (): React.ReactElement => {
           Waifuland
         </Text>
       </Link>
-      <Avatar
-        name="Jonathan"
-        src="https://cdn.discordapp.com/attachments/610338409671557121/1032420671122313237/Profile_Picture_1_1.png"
-      />
+      <Box>
+        <MenuProfile
+          onLogout={() =>
+            useLogout() ? window.location.replace("/login") : false
+          }
+          isLogged={useCheckToken()}
+        />
+      </Box>
     </Box>
   );
 };

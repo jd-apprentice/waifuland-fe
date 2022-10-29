@@ -10,6 +10,7 @@ export const Home: React.FC = (): React.ReactElement => {
   const [errors, setErrors] = useState<unknown>();
   const obtainWaifu = async () => {
     try {
+      useCheckToken() ? null : window.location.replace("/login");
       setLoading(true);
       const image = await api.waifuApi.getWaifu();
       const { url } = image;
@@ -20,10 +21,6 @@ export const Home: React.FC = (): React.ReactElement => {
       setLoading(true);
     }
   };
-
-  useEffect(() => {
-    useCheckToken();
-  }, [api.api.token]);
 
   useEffect(() => {
     obtainWaifu().then((waifus) => {

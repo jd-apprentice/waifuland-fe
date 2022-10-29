@@ -38,6 +38,7 @@ export class Api {
 
   removeToken() {
     this.apisauce.deleteHeader("Authorization");
+    api.api.apisauce.headers.Authorization = "";
   }
 
   /**
@@ -47,6 +48,7 @@ export class Api {
 
   setToken(token: string) {
     this.apisauce.setHeader("Authorization", "Bearer " + token);
+    api.api.apisauce.headers.Authorization = `Bearer ${token}`;
   }
 
   /**
