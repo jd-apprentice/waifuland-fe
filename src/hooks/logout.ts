@@ -7,8 +7,8 @@
 import api from "../services/base/api";
 
 export const useLogout = (): boolean => {
-  if (sessionStorage.getItem("token")) {
-    sessionStorage.removeItem("token");
+  if (localStorage.getItem("token")) {
+    localStorage.removeItem("token");
     return true;
   }
   if (api.api.token) {
