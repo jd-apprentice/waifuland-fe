@@ -13,7 +13,7 @@ export const LoginView = () => {
     const { username, password } = payload;
     const response = await waifuApi.login(username, password);
     api.api.setToken(response.token);
-    sessionStorage.setItem("token", response.token);
+    localStorage.setItem("token", response.token);
     return location("/");
   };
 

@@ -6,7 +6,13 @@ import { MenuProfile } from "../../components/common/menu";
 import { useCheckToken } from "../../hooks/checkToken";
 import { useLogout } from "../../hooks/logout";
 
-const Header: React.FC = (): React.ReactElement => {
+interface ImageProps {
+  src?: string;
+}
+
+const Header: React.FC<ImageProps> = ({
+  src,
+}: ImageProps): React.ReactElement => {
   const { pathname } = useLocation();
   const home = "/";
   const isHome = pathname === home ? undefined : home;
@@ -29,6 +35,7 @@ const Header: React.FC = (): React.ReactElement => {
       </Link>
       <Box>
         <MenuProfile
+          src={src}
           onLogout={() =>
             useLogout() ? window.location.replace("/login") : false
           }

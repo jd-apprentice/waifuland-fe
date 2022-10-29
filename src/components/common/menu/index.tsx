@@ -26,20 +26,24 @@ export const MenuProfile: React.FC<MenuProps> = ({
 }: MenuProps): React.ReactElement<MenuProps> => {
   return (
     <Menu>
-      <MenuButton as={Button} colorScheme={color}>
+      <MenuButton
+        cursor={isLogged ? "pointer" : "initial"}
+        as={Button}
+        colorScheme={color}
+      >
         <Avatar src={src} name={name} />
       </MenuButton>
-      <MenuList>
-        <MenuGroup ml={3} title="Profile">
-          <MenuItem>My Account</MenuItem>
-        </MenuGroup>
-        {isLogged && (
+      {isLogged && (
+        <MenuList>
+          <MenuGroup ml={3} title="Profile">
+            <MenuItem>My Account</MenuItem>
+          </MenuGroup>
           <>
             <MenuDivider />
             <MenuItem onClick={onLogout}>Logout</MenuItem>
           </>
-        )}
-      </MenuList>
+        </MenuList>
+      )}
     </Menu>
   );
 };

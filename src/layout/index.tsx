@@ -3,12 +3,15 @@ import Footer from "../layout/footer";
 import Header from "../layout/header";
 import { RouteProps } from "../models/types";
 
-const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
+const DefaultLayout: React.FC<RouteProps> = ({
+  route,
+  picture,
+}: RouteProps) => {
   return (
     <>
       <Box>
         <Box>
-          <Header />
+          <Header src={picture} />
         </Box>
         <Box>{route}</Box>
         <Box>
