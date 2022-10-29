@@ -1,7 +1,8 @@
 {
   "name": "waifuland-fe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.4",
@@ -10,11 +11,11 @@
     "apisauce": "^2.1.5",
     "framer-motion": "^7.4.0",
     "i18next": "^21.9.2",
-    "react": "^18.0.2",
-    "react-dom": "^18.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-i18next": "^11.18.6",
     "react-icons": "^4.3.1",
-    "react-router-dom": "^6.2.2"
+    "react-router-dom": "^6.4.2"
   },
   "scripts": {
     "start": "vite",
@@ -39,11 +40,11 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
+    "@types/node": "^18.11.3",
+    "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.4.2",
+    "typescript": "^4.8.4",
     "vite": "^3.1.8",
     "vite-plugin-svgr": "^2.2.2",
     "vite-tsconfig-paths": "^3.5.2"
