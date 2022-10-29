@@ -1,6 +1,6 @@
 import { ApiResponse } from "apisauce";
-import { Api } from "./api";
-import { getGeneralApiProblem } from "./apiProblem";
+import { Api } from "../base/api";
+import { getGeneralApiProblem } from "../base/apiProblem";
 
 export class WaifuApi {
   private api: Api;

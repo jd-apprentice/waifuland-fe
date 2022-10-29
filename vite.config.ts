@@ -9,7 +9,6 @@ export default defineConfig({
     outDir: "build",
   },
   server: {
-    open: true,
     port: 3500,
   },
   preview: {
