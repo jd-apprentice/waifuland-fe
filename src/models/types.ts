@@ -1,3 +1,5 @@
+import { FormEventHandler } from "react";
+
 export interface IMainProps {
   data?: string;
   isLoading?: boolean;
@@ -41,4 +43,20 @@ export interface Tag {
   is_nsfw: boolean;
   createdAt: Date;
   updatedAt: Date;
+}
+
+export interface ErrorCodes {
+  code: number;
+  message: string;
+}
+
+export interface LoginProps {
+  onSubmit?: FormEventHandler<HTMLDivElement>;
+  onChange: (username: string, password: string) => void;
+  onClick?: () => void;
+  loading?: boolean;
+  user?: string;
+  pass?: string;
+  hasErrors?: boolean;
+  responseError?: string;
 }

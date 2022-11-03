@@ -28,19 +28,17 @@ export const ImagesView = () => {
     }
   };
 
+  // Check token on the first render
   useEffect(() => {
     useCheckToken();
   }, [api.api.token]);
 
   useEffect(() => {
-    obtainWaifu(waifusPerFetch).then((waifus) => {
-      setWaifu(waifus);
-    });
-  }, []);
-
-  useEffect(() => {
     obtainTags().then((tag) => {
       setTags(tag);
+    });
+    obtainWaifu(waifusPerFetch).then((waifus) => {
+      setWaifu(waifus);
     });
   }, []);
 

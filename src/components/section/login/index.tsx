@@ -1,16 +1,15 @@
-import { Box, FormControl, FormLabel } from "@chakra-ui/react";
-import React, { FormEventHandler, useEffect } from "react";
+import {
+  Box,
+  Center,
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+} from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { LoginProps } from "../../../models/types";
 import { SubmitButton } from "../../common/button";
 import { PasswordInput, BasicInput } from "../../common/input";
-
-interface LoginProps {
-  onSubmit?: FormEventHandler<HTMLDivElement>;
-  onChange: (username: string, password: string) => void;
-  onClick?: () => void;
-  loading?: boolean;
-  user?: string;
-  pass?: string;
-}
 
 /**
  * @description This is a component that renders a login form.
@@ -26,6 +25,8 @@ export const Login = ({
   onSubmit,
   onChange,
   onClick,
+  hasErrors,
+  responseError,
 }: LoginProps): React.ReactElement<LoginProps> => {
   const [password, setPassword] = React.useState<string>(user);
   const [username, setUsername] = React.useState<string>(pass);
@@ -39,6 +40,7 @@ export const Login = ({
       <FormControl
         w={{ base: "100%", md: "50%", lg: "30%" }}
         m={10}
+        isInvalid={hasErrors}
         textAlign="center"
         onSubmit={onSubmit}
         isRequired
@@ -54,6 +56,17 @@ export const Login = ({
         <Box>
           <SubmitButton color="black" onClick={onClick} text="Log in" />
         </Box>
+        {!hasErrors ? (
+          <FormHelperText>
+            We will never share your information with anyone else.
+          </FormHelperText>
+        ) : (
+          <Center>
+            <FormErrorMessage fontSize={{ base: 20 }}>
+              {responseError}
+            </FormErrorMessage>
+          </Center>
+        )}
       </FormControl>
     </Box>
   );
