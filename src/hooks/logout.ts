@@ -1,10 +1,10 @@
+import api from "../services/base/api";
+
 /**
  * @hook useLogout
  * @description Remove token from header and session storage
  * @returns { boolean } ReactHook to logout
  */
-
-import api from "../services/base/api";
 
 export const useLogout = (): boolean => {
   if (localStorage.getItem("token")) {
