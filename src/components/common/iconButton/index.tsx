@@ -13,13 +13,7 @@ export const IconButtonCustom: React.FC<IconButtonProps> = ({
   padding,
 }: IconButtonProps): React.ReactElement<IconButtonProps> => {
   return (
-    <Link
-      alignItems="center"
-      display={{ base: "flex" }}
-      justifyContent={{ base: "center" }}
-      target={"_blank"}
-      href={link}
-    >
+    <Link alignItems="center" target={"_blank"} href={link}>
       <Icon
         p={padding}
         border="1px"
