@@ -1,19 +1,36 @@
 import DefaultLayout from "../../layout";
 import { Login } from "../../components";
 import api from "../../services/base/api";
-import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_ERRORS, LOGIN_ERRORS } from "../../const/errors";
 
 export const LoginView = () => {
   const location = useNavigate();
-  const [payload, setPayload] = React.useState({ username: "", password: "" });
+  const [hasErrors, setHasErrors] = useState<boolean>(false);
+  const [errors, setErrors] = useState<string>();
+  const [payload, setPayload] = useState({ username: "", password: "" });
 
   const login = async () => {
     const waifuApi = api.userApi;
     const { username, password } = payload;
     const response = await waifuApi.login(username, password);
-    api.api.setToken(response.token);
-    localStorage.setItem("token", response.token);
+    // When the server is sleeping, the response is different from the expected one
+    const serverErrors = API_ERRORS[response?.kind]?.code;
+    // When the server is awake, the response is the expected one
+    const hasErrors = LOGIN_ERRORS[response?.output?.payload?.message]?.code;
+    if (hasErrors) {
+      setHasErrors(true);
+      setErrors(LOGIN_ERRORS[response?.output?.payload?.message]?.message);
+      return;
+    }
+    if (serverErrors) {
+      setHasErrors(true);
+      setErrors(API_ERRORS[response?.kind].message);
+      return;
+    }
+    api.api.setToken(response?.token);
+    localStorage.setItem("token", response?.token);
     return location("/");
   };
 
@@ -21,6 +38,8 @@ export const LoginView = () => {
     <DefaultLayout
       route={
         <Login
+          hasErrors={hasErrors}
+          responseError={errors}
           onChange={(user, pass) =>
             setPayload({ username: user, password: pass })
           }
