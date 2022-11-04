@@ -31,6 +31,7 @@ export const LoginView = () => {
     }
     api.api.setToken(response?.token);
     localStorage.setItem("token", response?.token);
+    localStorage.setItem("user", response?.picture);
     return location("/");
   };
 

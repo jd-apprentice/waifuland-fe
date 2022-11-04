@@ -9,7 +9,6 @@ export interface IMainProps {
 
 export interface RouteProps {
   route: React.ReactNode;
-  picture?: string;
 }
 
 export interface TextBoxProps {
