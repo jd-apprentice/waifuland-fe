@@ -1,10 +1,11 @@
 import { Box } from "@chakra-ui/react";
+import { baseProfilePicture } from "../const";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
 import { RouteProps } from "../models/types";
 
 const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
-  const picture = localStorage.getItem("user") || undefined;
+  const picture = localStorage.getItem("user") ?? baseProfilePicture;
   return (
     <>
       <Box>

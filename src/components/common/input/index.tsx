@@ -4,6 +4,8 @@ import React from "react";
 interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeHolder?: string;
+  type?: string;
+  accept?: string;
 }
 
 /**
@@ -40,12 +42,22 @@ export const PasswordInput: React.FC<InputProps> = ({
  * @description This is a component that renders a input field.
  * @param { React.ChangeEvent<HTMLInputElement> } onChange - The event that triggered the function
  * @param { string } placeHolder - The placeholder text
+ * @param { string } type - The type of input
  * @returns { React.ReactElement<InputProps> } Returns a input field
  */
 
 export const BasicInput: React.FC<InputProps> = ({
   onChange,
   placeHolder,
+  type,
+  accept,
 }: InputProps): React.ReactElement<InputProps> => {
-  return <Input placeholder={placeHolder} onChange={onChange} />;
+  return (
+    <Input
+      accept={accept}
+      type={type}
+      placeholder={placeHolder}
+      onChange={onChange}
+    />
+  );
 };

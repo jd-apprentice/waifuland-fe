@@ -26,7 +26,7 @@ export const LoginView = () => {
     }
     if (serverErrors) {
       setHasErrors(true);
-      setErrors(API_ERRORS[response?.kind].message);
+      setErrors(API_ERRORS[response?.kind]?.message);
       return;
     }
     api.api.setToken(response?.token);

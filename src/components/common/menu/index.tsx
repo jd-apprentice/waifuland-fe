@@ -8,6 +8,7 @@ import {
   MenuDivider,
   Avatar,
 } from "@chakra-ui/react";
+import { baseProfilePicture } from "../../../const";
 
 interface MenuProps {
   src?: string;
@@ -15,14 +16,16 @@ interface MenuProps {
   color?: string;
   isLogged?: boolean;
   onLogout?: () => void;
+  onMyAccount?: () => void;
 }
 
 export const MenuProfile: React.FC<MenuProps> = ({
-  src = "https://cdn.discordapp.com/attachments/610338409671557121/1032420671122313237/Profile_Picture_1_1.png",
+  src = baseProfilePicture,
   name = "Waifuland",
   color = "red.200",
   isLogged,
   onLogout,
+  onMyAccount,
 }: MenuProps): React.ReactElement<MenuProps> => {
   return (
     <Menu>
@@ -36,7 +39,7 @@ export const MenuProfile: React.FC<MenuProps> = ({
       {isLogged && (
         <MenuList>
           <MenuGroup ml={3} title="Profile">
-            <MenuItem>My Account</MenuItem>
+            <MenuItem onClick={onMyAccount}>My Account</MenuItem>
           </MenuGroup>
           <>
             <MenuDivider />

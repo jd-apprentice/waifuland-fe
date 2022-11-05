@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Link, Text } from "@chakra-ui/react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SimpleDrawer from "../../components/common/drawer";
 import { MenuProfile } from "../../components/common/menu";
 import { useCheckToken } from "../../hooks/checkToken";
@@ -14,6 +14,7 @@ const Header: React.FC<ImageProps> = ({
   src,
 }: ImageProps): React.ReactElement => {
   const { pathname } = useLocation();
+  const location = useNavigate();
   const isHome = pathname === "/" || pathname === "/login" ? undefined : "/";
   const behaviorCursor = !isHome ? "default" : "pointer";
 
@@ -36,6 +37,7 @@ const Header: React.FC<ImageProps> = ({
       <Box>
         <MenuProfile
           src={src}
+          onMyAccount={() => location("/account")}
           onLogout={() =>
             useLogout() ? window.location.replace("/login") : false
           }
