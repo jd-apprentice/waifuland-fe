@@ -15,7 +15,7 @@ export class UserApi {
    */
 
   // Send username and password in the body of the request
-  async login(username: string, password: string): Promise<unknown> {
+  async login(username: string, password: string): Promise<any> {
     try {
       const response = await this.api.apisauce.post("user/login", {
         username,
