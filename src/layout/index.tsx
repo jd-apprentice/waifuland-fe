@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useCheckToken } from "../hooks/checkToken";
 import Footer from "../layout/footer";
@@ -13,7 +13,7 @@ const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
   const isAccount = pathname === "/account";
   const [user, setUser] = useState<IUser | null>();
 
-  useEffect(() => {
+  const validateToken = useCallback(async () => {
     const isLogged = useCheckToken();
     if (isLogged) {
       if (token) {
@@ -23,6 +23,10 @@ const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
       }
     }
   }, [user]);
+
+  useEffect(() => {
+    validateToken();
+  }, []);
 
   return (
     <>
