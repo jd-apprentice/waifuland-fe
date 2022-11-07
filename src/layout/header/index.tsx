@@ -8,13 +8,14 @@ import { useLogout } from "../../hooks/logout";
 
 interface ImageProps {
   src?: string;
+  isMyAccount?: boolean;
 }
 
 const Header: React.FC<ImageProps> = ({
   src,
+  isMyAccount,
 }: ImageProps): React.ReactElement => {
   const { pathname } = useLocation();
-  const location = useNavigate();
   const isHome = pathname === "/" || pathname === "/login" ? undefined : "/";
   const behaviorCursor = !isHome ? "default" : "pointer";
 
@@ -36,8 +37,11 @@ const Header: React.FC<ImageProps> = ({
       </Link>
       <Box>
         <MenuProfile
+          isMyAccount={isMyAccount}
           src={src}
-          onMyAccount={() => location("/account")}
+          onMyAccount={() =>
+            pathname === "/account" ? null : window.location.replace("/account")
+          }
           onLogout={() =>
             useLogout() ? window.location.replace("/login") : false
           }
