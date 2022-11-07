@@ -1,5 +1,5 @@
 var config = {
-    baseURL: 'http://localhost:4000/api',
+    baseURL: 'https://waifuland-api.onrender.com/api',
     port: 3500
 }
 window.config = config;
