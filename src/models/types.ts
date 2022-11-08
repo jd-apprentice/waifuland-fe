@@ -9,7 +9,6 @@ export interface IMainProps {
 
 export interface RouteProps {
   route: React.ReactNode;
-  picture?: string;
 }
 
 export interface TextBoxProps {
@@ -59,4 +58,11 @@ export interface LoginProps {
   pass?: string;
   hasErrors?: boolean;
   responseError?: string;
+}
+
+export interface IUser {
+  id?: string;
+  isAdmin?: boolean;
+  profile_picture?: string;
+  username?: string;
 }
