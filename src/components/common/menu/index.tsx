@@ -7,6 +7,7 @@ import {
   MenuItem,
   MenuDivider,
   Avatar,
+  Skeleton,
 } from "@chakra-ui/react";
 
 interface MenuProps {
@@ -15,14 +16,18 @@ interface MenuProps {
   color?: string;
   isLogged?: boolean;
   onLogout?: () => void;
+  onMyAccount?: () => void;
+  isMyAccount?: boolean;
 }
 
 export const MenuProfile: React.FC<MenuProps> = ({
-  src = "https://cdn.discordapp.com/attachments/610338409671557121/1032420671122313237/Profile_Picture_1_1.png",
+  src = "",
   name = "Waifuland",
   color = "red.200",
   isLogged,
   onLogout,
+  onMyAccount,
+  isMyAccount,
 }: MenuProps): React.ReactElement<MenuProps> => {
   return (
     <Menu>
@@ -31,18 +36,33 @@ export const MenuProfile: React.FC<MenuProps> = ({
         as={Button}
         colorScheme={color}
       >
-        <Avatar src={src} name={name} />
+        {src === "" ? (
+          <Skeleton border="1px" borderRadius="full">
+            <Avatar src={src} name={name} />
+          </Skeleton>
+        ) : (
+          <Avatar src={src} name={name} />
+        )}
       </MenuButton>
-      {isLogged && (
+      {isLogged ? (
         <MenuList>
-          <MenuGroup ml={3} title="Profile">
-            <MenuItem>My Account</MenuItem>
-          </MenuGroup>
-          <>
-            <MenuDivider />
-            <MenuItem onClick={onLogout}>Logout</MenuItem>
-          </>
+          {!isMyAccount && (
+            <>
+              <MenuGroup ml={3} title="Profile">
+                <MenuItem onClick={onMyAccount}>My Account</MenuItem>
+              </MenuGroup>
+              <MenuDivider />
+            </>
+          )}
+          <MenuItem
+            cursor={isLogged ? "pointer" : "initial"}
+            onClick={onLogout}
+          >
+            Logout
+          </MenuItem>
         </MenuList>
+      ) : (
+        <></>
       )}
     </Menu>
   );

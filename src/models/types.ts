@@ -59,3 +59,10 @@ export interface LoginProps {
   hasErrors?: boolean;
   responseError?: string;
 }
+
+export interface IUser {
+  id?: string;
+  isAdmin?: boolean;
+  profile_picture?: string;
+  username?: string;
+}
