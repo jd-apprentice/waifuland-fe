@@ -8,7 +8,7 @@ interface SelectProps {
 
 const SelectBox = ({ options, onChange }: SelectProps) => {
   return (
-    <Box mb={1}>
+    <Box mt={3} mb={1}>
       <Select onChange={onChange} defaultValue={1}>
         {options &&
           options.map((option, index) => (

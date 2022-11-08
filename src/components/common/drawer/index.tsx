@@ -10,30 +10,29 @@ import {
   IconButton,
   Link,
   DrawerFooter,
+  Box,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useRef } from "react";
 import { DiGithubAlt } from "react-icons/di";
 import { IconButtonCustom } from "../iconButton";
 
-const SimpleDrawer: React.FC = (): React.ReactElement => {
+const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
+  isLogged,
+}: {
+  isLogged: boolean;
+}): React.ReactElement => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef: any = useRef();
 
   return (
     <>
-      <IconButton
-        ref={btnRef}
-        onClick={onOpen}
-        icon={<HamburgerIcon />}
-        aria-label={"Menu"}
-      />
-      <Drawer
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+      <Box visibility={isLogged ? "visible" : "hidden"}>
+        <IconButton
+          onClick={onOpen}
+          icon={<HamburgerIcon />}
+          aria-label={"Menu"}
+        />
+      </Box>
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
