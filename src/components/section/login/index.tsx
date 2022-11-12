@@ -47,11 +47,17 @@ export const Login = ({
       >
         <Box>
           <FormLabel>Username</FormLabel>
-          <BasicInput onChange={(e) => setUsername(e.target.value)} />
+          <BasicInput
+            placeHolder="prueba"
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </Box>
         <Box>
           <FormLabel>Password</FormLabel>
-          <PasswordInput onChange={(e) => setPassword(e.target.value)} />
+          <PasswordInput
+            placeHolder="prueba123"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </Box>
         <Box>
           <SubmitButton color="black" onClick={onClick} text="Log in" />
