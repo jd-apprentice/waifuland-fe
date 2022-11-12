@@ -1,24 +1,20 @@
-import { Box, Center, FormControl, FormLabel } from "@chakra-ui/react";
+import { Box, Center, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
+import { baseProfilePicture } from "../../../const";
+import { AccountProps } from "../../../models/types";
 import { SubmitButton } from "../../common/button";
 import { BasicInput } from "../../common/input";
 
-interface AccountProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onClick: () => void;
-  picture: string;
-}
-
 export const Account = ({ onChange, onClick, picture }: AccountProps) => {
   return (
-    <FormControl p={{ base: 5, lg: 10 }}>
+    <Box p={{ base: 5, lg: 10 }}>
       <Center display="flex" flexDirection="column">
-        <FormLabel fontSize={{ base: 30, lg: 40 }}>Profile picture</FormLabel>
+        <Text fontSize={{ base: 20, lg: 30 }}>Profile picture</Text>
         <Image
           width={{ base: 290 }}
           height={{ base: 290 }}
           mb={{ base: 5, lg: 10 }}
-          src={picture}
+          src={picture ?? baseProfilePicture}
           alt="Profile picture"
         />
         <Box>
@@ -31,6 +27,6 @@ export const Account = ({ onChange, onClick, picture }: AccountProps) => {
         </Box>
         <SubmitButton onClick={onClick} color="red.200" text="Save" />
       </Center>
-    </FormControl>
+    </Box>
   );
 };

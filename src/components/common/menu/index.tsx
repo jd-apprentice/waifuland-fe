@@ -17,7 +17,6 @@ interface MenuProps {
   isLogged?: boolean;
   onLogout?: () => void;
   onMyAccount?: () => void;
-  isMyAccount?: boolean;
 }
 
 export const MenuProfile: React.FC<MenuProps> = ({
@@ -27,15 +26,10 @@ export const MenuProfile: React.FC<MenuProps> = ({
   isLogged,
   onLogout,
   onMyAccount,
-  isMyAccount,
 }: MenuProps): React.ReactElement<MenuProps> => {
   return (
     <Menu>
-      <MenuButton
-        cursor={isLogged ? "pointer" : "initial"}
-        as={Button}
-        colorScheme={color}
-      >
+      <MenuButton as={Button} colorScheme={color}>
         {src === "" ? (
           <Skeleton border="1px" borderRadius="full">
             <Avatar src={src} name={name} />
@@ -46,20 +40,13 @@ export const MenuProfile: React.FC<MenuProps> = ({
       </MenuButton>
       {isLogged ? (
         <MenuList>
-          {!isMyAccount && (
-            <>
-              <MenuGroup ml={3} title="Profile">
-                <MenuItem onClick={onMyAccount}>My Account</MenuItem>
-              </MenuGroup>
-              <MenuDivider />
-            </>
-          )}
-          <MenuItem
-            cursor={isLogged ? "pointer" : "initial"}
-            onClick={onLogout}
-          >
-            Logout
-          </MenuItem>
+          <>
+            <MenuGroup ml={3} title="Profile">
+              <MenuItem onClick={onMyAccount}>My Account</MenuItem>
+            </MenuGroup>
+            <MenuDivider />
+          </>
+          <MenuItem onClick={onLogout}>Logout</MenuItem>
         </MenuList>
       ) : (
         <></>

@@ -66,3 +66,9 @@ export interface IUser {
   profile_picture?: string;
   username?: string;
 }
+
+export interface AccountProps {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: () => void;
+  picture: string;
+}

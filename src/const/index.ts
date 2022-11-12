@@ -23,7 +23,6 @@ export const documentationText = {
   },
 };
 
-export const baseProfilePicture =
-  "https://cdn.discordapp.com/attachments/610338409671557121/1032420671122313237/Profile_Picture_1_1.png";
+export const baseProfilePicture = "https://via.placeholder.com/300";
 
 export const waifusPerFetch = 8;
