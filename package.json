@@ -1,52 +1,65 @@
 {
-  "name": "waifuland-fe",
-  "version": "0.1.2",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.11",
-    "@chakra-ui/react": "^2.3.4",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "apisauce": "^2.1.5",
-    "framer-motion": "^7.4.0",
-    "i18next": "^21.9.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^11.18.6",
-    "react-icons": "^4.3.1",
-    "react-router-dom": "^6.4.2"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "serve": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.3",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8",
-    "vite-plugin-svgr": "^2.2.2",
-    "vite-tsconfig-paths": "^3.5.2"
-  }
+    "name": "waifuland-fe",
+    "version": "0.1.3",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "@chakra-ui/icons": "^2.0.11",
+        "@chakra-ui/react": "^2.3.4",
+        "@emotion/react": "^11.10.4",
+        "@emotion/styled": "^11.10.4",
+        "apisauce": "^2.1.5",
+        "framer-motion": "^7.4.0",
+        "i18next": "^21.9.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^11.18.6",
+        "react-icons": "^4.3.1",
+        "react-router-dom": "^6.4.2"
+    },
+    "scripts": {
+        "prebuild": "rm -rf build",
+        "lint": "eslint . --ext .ts,.tsx --fix",
+        "prettier": "prettier --write .",
+        "start": "vite",
+        "build": "tsc && vite build",
+        "serve": "vite preview"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.3",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "@typescript-eslint/eslint-plugin": "^5.42.1",
+        "@typescript-eslint/parser": "^5.42.1",
+        "@vitejs/plugin-react": "^2.1.0",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard-with-typescript": "^23.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.5.1",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-react": "^7.31.10",
+        "prettier": "2.7.1",
+        "typescript": "^4.8.4",
+        "vite": "^3.1.8",
+        "vite-plugin-svgr": "^2.2.2",
+        "vite-tsconfig-paths": "^3.5.2"
+    }
 }

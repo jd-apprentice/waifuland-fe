@@ -8,26 +8,26 @@ import { AiOutlineReload } from "react-icons/ai";
  */
 
 export const LoadImage: React.FC<{ onClick: (() => void) | undefined }> = ({
-  onClick,
+    onClick,
 }: {
-  onClick: (() => void) | undefined;
+    onClick: (() => void) | undefined
 }): React.ReactElement => {
-  return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      fontSize={{ base: "lg", lg: "3xl" }}
-    >
-      <Tooltip hasArrow label="Load a new image">
-        <Button
-          backgroundColor="red.200"
-          colorScheme="gray"
-          variant="outline"
-          onClick={onClick}
+    return (
+        <Box
+            display="flex"
+            justifyContent="center"
+            fontSize={{ base: "lg", lg: "3xl" }}
         >
-          <Icon as={AiOutlineReload} />
-        </Button>
-      </Tooltip>
-    </Box>
-  );
+            <Tooltip hasArrow label="Load a new image">
+                <Button
+                    backgroundColor="red.200"
+                    colorScheme="gray"
+                    variant="outline"
+                    onClick={onClick}
+                >
+                    <Icon as={AiOutlineReload} />
+                </Button>
+            </Tooltip>
+        </Box>
+    );
 };
