@@ -5,9 +5,9 @@ import { useCheckToken } from "../../hooks/checkToken";
 import api from "../../services/base/api";
 
 export const DocsView = () => {
-  useEffect(() => {
-    useCheckToken();
-  }, [api.api.token]);
+    useEffect(() => {
+        useCheckToken();
+    }, [api.api.token]);
 
-  return <DefaultLayout route={<Doc />} />;
+    return <DefaultLayout route={<Doc />} />;
 };

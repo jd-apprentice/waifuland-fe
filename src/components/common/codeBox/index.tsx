@@ -11,13 +11,13 @@ import React from "react";
  */
 
 export const CodeBox: React.FC<CodeBoxProps> = ({
-  method,
-  text,
-  endpoint,
+    method,
+    text,
+    endpoint,
 }: CodeBoxProps): React.ReactElement<CodeBoxProps> => {
-  return (
-    <Text m={2}>
-      <Code>{method.toUpperCase()}</Code> {text} <Code>{endpoint}</Code>
-    </Text>
-  );
+    return (
+        <Text m={2}>
+            <Code>{method.toUpperCase()}</Code> {text} <Code>{endpoint}</Code>
+        </Text>
+    );
 };

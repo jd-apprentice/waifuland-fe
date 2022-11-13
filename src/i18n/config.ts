@@ -3,15 +3,15 @@ import translation from "./en/translation.json";
 import { initReactI18next } from "react-i18next";
 
 export const resources = {
-  en: {
-    translation,
-  },
+    en: {
+        translation,
+    },
 } as const;
 
 i18n.use(initReactI18next).init({
-  lng: "en",
-  interpolation: {
-    escapeValue: false,
-  },
-  resources,
+    lng: "en",
+    interpolation: {
+        escapeValue: false,
+    },
+    resources,
 });
