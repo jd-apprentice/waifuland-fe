@@ -5,10 +5,10 @@ import { ErrorCodes } from "../models/types";
  */
 
 export const LOGIN_ERRORS: Record<string, ErrorCodes> = {
-  "Invalid credentials": {
-    code: 400,
-    message: "Username or password is incorrect, please try again.",
-  },
+    "Invalid credentials": {
+        code: 400,
+        message: "Username or password is incorrect, please try again.",
+    },
 };
 
 /**
@@ -16,8 +16,8 @@ export const LOGIN_ERRORS: Record<string, ErrorCodes> = {
  */
 
 export const API_ERRORS: Record<string, ErrorCodes> = {
-  timeout: {
-    code: 400,
-    message: "Request timed out, please try again.",
-  },
+    timeout: {
+        code: 400,
+        message: "Request timed out, please try again.",
+    },
 };

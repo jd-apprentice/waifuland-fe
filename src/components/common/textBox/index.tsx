@@ -8,13 +8,13 @@ import { TextBoxProps } from "../../../models/types";
  */
 
 export const TextBox: React.FC<TextBoxProps> = ({
-  text,
+    text,
 }: TextBoxProps): React.ReactElement => {
-  return (
-    <Box textAlign="center" p={{ base: 3 }}>
-      <Text letterSpacing="tight" fontSize={{ base: "20px" }}>
-        {text}
-      </Text>
-    </Box>
-  );
+    return (
+        <Box textAlign="center" p={{ base: 3 }}>
+            <Text letterSpacing="tight" fontSize={{ base: "20px" }}>
+                {text}
+            </Text>
+        </Box>
+    );
 };

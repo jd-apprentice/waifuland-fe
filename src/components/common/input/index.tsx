@@ -2,12 +2,12 @@ import { InputGroup, Input, InputRightElement, Button } from "@chakra-ui/react";
 import React from "react";
 
 interface InputProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeHolder?: string;
-  type?: string;
-  accept?: string;
-  name?: string;
-  className?: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    placeHolder?: string
+    type?: string
+    accept?: string
+    name?: string
+    className?: string
 }
 
 /**
@@ -17,27 +17,27 @@ interface InputProps {
  */
 
 export const PasswordInput: React.FC<InputProps> = ({
-  onChange,
-  placeHolder,
+    onChange,
+    placeHolder,
 }: InputProps): React.ReactElement<InputProps> => {
-  const [show, setShow] = React.useState<boolean>(false);
-  const handleClick = () => setShow(!show);
+    const [show, setShow] = React.useState<boolean>(false);
+    const handleClick = () => setShow(!show);
 
-  return (
-    <InputGroup size="md">
-      <Input
-        pr="4.5rem"
-        type={show ? "text" : "password"}
-        placeholder={placeHolder}
-        onChange={onChange}
-      />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleClick}>
-          {show ? "Hide" : "Show"}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
-  );
+    return (
+        <InputGroup size="md">
+            <Input
+                pr="4.5rem"
+                type={show ? "text" : "password"}
+                placeholder={placeHolder}
+                onChange={onChange}
+            />
+            <InputRightElement width="4.5rem">
+                <Button h="1.75rem" size="sm" onClick={handleClick}>
+                    {show ? "Hide" : "Show"}
+                </Button>
+            </InputRightElement>
+        </InputGroup>
+    );
 };
 
 /**
@@ -50,21 +50,21 @@ export const PasswordInput: React.FC<InputProps> = ({
  */
 
 export const BasicInput: React.FC<InputProps> = ({
-  onChange,
-  placeHolder,
-  type,
-  accept,
-  name,
-  className,
+    onChange,
+    placeHolder,
+    type,
+    accept,
+    name,
+    className,
 }: InputProps): React.ReactElement<InputProps> => {
-  return (
-    <Input
-      className={className}
-      name={name}
-      accept={accept}
-      type={type}
-      placeholder={placeHolder}
-      onChange={onChange}
-    />
-  );
+    return (
+        <Input
+            className={className}
+            name={name}
+            accept={accept}
+            type={type}
+            placeholder={placeHolder}
+            onChange={onChange}
+        />
+    );
 };

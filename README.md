@@ -4,17 +4,17 @@
 
 ## 📖 Status
 
-- Want to see how the project is going? check this -> [Issue](https://github.com/jd-apprentice/waifuland-api/issues/3)
+-   Want to see how the project is going? check this -> [Issue](https://github.com/jd-apprentice/waifuland-api/issues/3)
 
 ## 🌐 Can I check the page
 
-- Yes! is currently being hosted in vercel -> [Here](https://waifuland-fe.vercel.app/)
+-   Yes! is currently being hosted in vercel -> [Here](https://waifuland-fe.vercel.app/)
 
 ## 📚 Stack
 
-- React
-- React Router
-- Chakra UI
-- Typescript
-- Vercel
-- Apisauce
+-   React
+-   React Router
+-   Chakra UI
+-   Typescript
+-   Vercel
+-   Apisauce

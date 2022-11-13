@@ -8,6 +8,6 @@ import { useTranslation } from "react-i18next";
  */
 
 export const useChangeLanguage = (lng: string): Promise<TFunction> => {
-  const { i18n } = useTranslation();
-  return i18n.changeLanguage(lng);
+    const { i18n } = useTranslation();
+    return i18n.changeLanguage(lng);
 };
