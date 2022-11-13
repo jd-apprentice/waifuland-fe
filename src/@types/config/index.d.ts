@@ -1,7 +1,7 @@
 export {};
 
 declare global {
-  interface Window {
-    config: Record<string, string>;
-  }
+    interface Window {
+        config: Record<string, string>
+    }
 }

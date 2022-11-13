@@ -7,15 +7,15 @@ import api from "../services/base/api";
  */
 
 export const useLogout = (): boolean => {
-  if (localStorage.getItem("token")) {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    return true;
-  }
-  if (api.api.token) {
-    api.api.token = "";
-    api.api.apisauce.headers.Authorization = "";
-    return true;
-  }
-  return false;
+    if (localStorage.getItem("token")) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        return true;
+    }
+    if (api.api.token) {
+        api.api.token = "";
+        api.api.apisauce.headers.Authorization = "";
+        return true;
+    }
+    return false;
 };
