@@ -35,5 +35,6 @@ jobs:
                         port: 3500,
                       }
                       window.config = config" > public/config/index.js
+                      pm2 stop all
                       npm run build
-                      pm2 restart waifuland-fe
+                      pm2 restart all
