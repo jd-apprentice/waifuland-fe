@@ -2,6 +2,9 @@ export {};
 
 declare global {
     interface Window {
-        config: Record<string, string>
+        config: {
+            baseUrl: string;
+            port: number;
+        }
     }
 }

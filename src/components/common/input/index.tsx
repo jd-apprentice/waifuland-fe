@@ -1,6 +1,5 @@
 import { InputGroup, Input, InputRightElement, Button } from "@chakra-ui/react";
-import React from "react";
-
+import { useState } from "react";
 interface InputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     placeHolder?: string
@@ -20,7 +19,7 @@ export const PasswordInput: React.FC<InputProps> = ({
     onChange,
     placeHolder,
 }: InputProps): React.ReactElement<InputProps> => {
-    const [show, setShow] = React.useState<boolean>(false);
+    const [show, setShow] = useState<boolean>(false);
     const handleClick = () => setShow(!show);
 
     return (

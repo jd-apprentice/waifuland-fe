@@ -6,7 +6,7 @@ import {
     FormHelperText,
     FormLabel,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { LoginProps } from "../../../models/types";
 import { SubmitButton } from "../../common/button";
 import { PasswordInput, BasicInput } from "../../common/input";
@@ -28,8 +28,8 @@ export const Login = ({
     hasErrors,
     responseError,
 }: LoginProps): React.ReactElement<LoginProps> => {
-    const [password, setPassword] = React.useState<string>(user);
-    const [username, setUsername] = React.useState<string>(pass);
+    const [password, setPassword] = useState<string>(user);
+    const [username, setUsername] = useState<string>(pass);
 
     useEffect(() => {
         onChange(username, password);

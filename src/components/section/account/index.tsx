@@ -5,6 +5,7 @@ import { AccountProps } from "../../../models/types";
 import { SubmitButton } from "../../common/button";
 import { BasicInput } from "../../common/input";
 
+
 export const Account = ({ onChange, onClick, picture }: AccountProps) => {
     return (
         <Box p={{ base: 5, lg: 10 }}>

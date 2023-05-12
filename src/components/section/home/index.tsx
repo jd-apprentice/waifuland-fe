@@ -1,10 +1,11 @@
 import { Box, Image, Skeleton, Text, Fade } from "@chakra-ui/react";
-import ButtonLink from "../../../components/common/link";
 import { LoadImage } from "../../../components/common/loadImage";
 import { TextBox } from "../../../components/common/textBox";
 import { homeText } from "../../../const";
 import { IMainProps } from "../../../models/types";
 import { ImageStyle } from "./styles";
+import ButtonLink from "../../../components/common/link";
+
 
 /**
  * @descriptions The home screen of the application with an image and some text
