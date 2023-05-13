@@ -1,4 +1,8 @@
-const BASE_URL = window.config.baseURL;
+/**
+ * The base url of the api.
+ */
+
+const BASE_URL = import.meta.env.VITE_BASEURL;
 
 /**
  * The options used to configure the API.

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { documentationText } from "../../../const";
 import { CodeBox } from "../../../components/common/codeBox";
 
+
 const DocStyles = {
     display: "flex",
     justifyContent: "center",

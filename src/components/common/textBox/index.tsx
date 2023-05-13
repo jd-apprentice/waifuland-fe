@@ -1,6 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { TextBoxProps } from "../../../models/types";
 
+
 /**
  * @description Generates a box that displays a portion of text
  * @param { string } text - The text to be displayed in the box

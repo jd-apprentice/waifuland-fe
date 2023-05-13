@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  waifuland_app:
+    container_name: waifuland_app_container
+    image: dyallo/waifuland-fe
+    env_file:
+      - .env.production
+    restart: always
+    ports:
+      - 3500:3500

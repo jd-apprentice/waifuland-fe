@@ -4,6 +4,7 @@ import { Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import SelectBox from "../../../components/common/select";
 
+
 const ImagesStyles = {
     display: "flex",
     justifyContent: "center",

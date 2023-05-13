@@ -21,8 +21,8 @@
         "prebuild": "rm -rf build",
         "lint": "eslint . --ext .ts,.tsx --fix",
         "prettier": "prettier --write .",
-        "start": "vite",
-        "build": "tsc && vite build",
+        "start": "vite --host 0.0.0.0 --port 3500",
+        "build": "tsc && vite build --mode production",
         "serve": "vite preview"
     },
     "eslintConfig": {

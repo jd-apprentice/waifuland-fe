@@ -72,3 +72,12 @@ export interface AccountProps {
     onClick: () => void
     picture: string
 }
+
+export interface AppConfig {
+    baseUrl: string;
+    port: number;
+}
+  
+export interface AppProps {
+    config?: AppConfig;
+}
