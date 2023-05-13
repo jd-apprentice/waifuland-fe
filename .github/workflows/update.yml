@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/waifuland-api:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/waifuland-fe:latest
 
   compose-up:
     runs-on: ubuntu-22.04
