@@ -12,6 +12,5 @@ WORKDIR /app
 COPY --from=build-runner /tmp/app/package*.json ./
 RUN npm i --omit=dev
 COPY --from=build-runner /tmp/app/dist ./dist
-RUN npm i -g serve
-EXPOSE 3500
-CMD [ "serve", "-s", "dist", "-l", "3500"]
+RUN npm i -g surge
+CMD [ "surge", "dist", "https://app.jonathan.com.ar"]
