@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   waifuland_app:
-    container_name: waifuland_app_container
+    container_name: waifuland_fe_app_container
     image: dyallo/waifuland-fe
     restart: always
     env_file:
