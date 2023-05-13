@@ -6,5 +6,7 @@ services:
     restart: always
     env_file:
       - .env.production
+    environment:
+      - SURGE_TOKEN=${SURGE_TOKEN}
     ports:
       - 3500:3500
