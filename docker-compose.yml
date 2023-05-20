@@ -4,6 +4,8 @@ services:
         container_name: waifuland_fe_app_container
         image: dyallo/waifuland-fe
         restart: always
+        env_file:
+            - .env
         environment:
             - VITE_BASEURL=${VITE_BASEURL}
             - VITE_PORT=${VITE_PORT}
