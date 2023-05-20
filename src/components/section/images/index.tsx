@@ -3,6 +3,7 @@ import { ImagesProps } from '../../../models/types'
 import { Image } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import SelectBox from '../../../components/common/select'
+import React from 'react'
 
 const ImagesStyles = {
     display: 'flex',
@@ -13,7 +14,7 @@ const ImagesStyles = {
 export const Images = ({ images, tags, onChange }: ImagesProps) => {
     const { t } = useTranslation()
     return (
-        <>
+        <React.Fragment>
             <Box sx={ImagesStyles}>
                 <Heading fontSize={{ base: 'md', lg: '2xl' }}>
                     {t('images.title')}
@@ -38,6 +39,6 @@ export const Images = ({ images, tags, onChange }: ImagesProps) => {
                         )}
                 </SimpleGrid>
             </Box>
-        </>
+        </React.Fragment>
     )
 }

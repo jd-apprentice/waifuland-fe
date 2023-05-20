@@ -26,7 +26,7 @@ const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
     }, [])
 
     return (
-        <>
+        <React.Fragment>
             <Box>
                 <Box>
                     <Header src={user?.profile_picture} />
@@ -36,7 +36,7 @@ const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
                     <Footer />
                 </Box>
             </Box>
-        </>
+        </React.Fragment>
     )
 }
 

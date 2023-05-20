@@ -41,18 +41,18 @@ export const MenuProfile: React.FC<MenuProps> = ({
             </MenuButton>
             {isLogged ? (
                 <MenuList>
-                    <>
+                    <React.Fragment>
                         <MenuGroup ml={3} title="Profile">
                             <MenuItem onClick={onMyAccount}>
                                 My Account
                             </MenuItem>
                         </MenuGroup>
                         <MenuDivider />
-                    </>
+                    </React.Fragment>
                     <MenuItem onClick={onLogout}>Logout</MenuItem>
                 </MenuList>
             ) : (
-                <></>
+                <React.Fragment></React.Fragment>
             )}
         </Menu>
     )

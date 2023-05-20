@@ -22,7 +22,7 @@ export const Main: React.FC<IMainProps> = ({
     onClick,
 }: IMainProps) => {
     return (
-        <>
+        <React.Fragment>
             <Box
                 display={{ base: 'flex' }}
                 justifyContent={{ base: 'center' }}
@@ -58,6 +58,6 @@ export const Main: React.FC<IMainProps> = ({
             >
                 <ButtonLink />
             </Box>
-        </>
+        </React.Fragment>
     )
 }

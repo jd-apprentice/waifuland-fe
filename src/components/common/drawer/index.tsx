@@ -25,7 +25,7 @@ const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
-        <>
+        <React.Fragment>
             <Box visibility={isLogged ? 'visible' : 'hidden'}>
                 <IconButton
                     onClick={onOpen}
@@ -58,7 +58,7 @@ const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
-        </>
+        </React.Fragment>
     )
 }
 

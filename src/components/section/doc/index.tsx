@@ -2,6 +2,7 @@ import { Box, Code, Heading, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { documentationText } from '../../../const'
 import { CodeBox } from '../../../components/common/codeBox'
+import React from "react";
 
 const DocStyles = {
     display: 'flex',
@@ -13,7 +14,7 @@ export const Doc = () => {
     const { t } = useTranslation()
 
     return (
-        <>
+        <React.Fragment>
             <Box sx={DocStyles}>
                 <Heading fontSize={{ base: 'md', lg: '2xl' }}>
                     {t('documentation.title')}
@@ -47,6 +48,6 @@ export const Doc = () => {
                     </Code>
                 </Text>
             </Box>
-        </>
+        </React.Fragment>
     )
 }
