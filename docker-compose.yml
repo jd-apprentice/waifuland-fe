@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  waifuland_app:
+    container_name: waifuland_fe_app_container
+    image: dyallo/waifuland-fe
+    restart: always
+    environment:
+      - VITE_BASEURL=${VITE_BASEURL}
+      - VITE_PORT=${VITE_PORT}
+    ports:
+      - 3500:3500
