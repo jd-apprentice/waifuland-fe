@@ -22,7 +22,7 @@
         "lint": "eslint . --ext .ts,.tsx --fix",
         "prettier": "prettier --write .",
         "start": "vite",
-        "build": "vite build --mode production",
+        "build": "tsc && vite build",
         "serve": "vite preview"
     },
     "eslintConfig": {
