@@ -15,11 +15,11 @@ export default defineConfig({
         outDir: 'dist',
     },
     server: {
-        open: true,
         host: true,
         port: 3500,
     },
     preview: {
         port: 3525,
+        open: true,
     },
 })
