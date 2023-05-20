@@ -1,4 +1,4 @@
-import { FormEventHandler } from 'react'
+import React, { FormEventHandler } from 'react'
 
 export interface IMainProps {
     data?: string

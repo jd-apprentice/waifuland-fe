@@ -1,5 +1,6 @@
 import { Tooltip, Button, Icon, Box } from '@chakra-ui/react'
 import { AiOutlineReload } from 'react-icons/ai'
+import React from 'react'
 
 /**
  * @description Spinner icon that when clicked will download a new image from the server

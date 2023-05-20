@@ -1,5 +1,6 @@
 import { Text, Code } from '@chakra-ui/react'
 import { CodeBoxProps } from '../../../models/types'
+import React from 'react'
 
 /**
  * @description Creates a component for displaying Text and Code boxes in the documentation

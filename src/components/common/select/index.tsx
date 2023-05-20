@@ -1,5 +1,6 @@
 import { Select, Box } from '@chakra-ui/react'
 import { Tag } from '../../../models/types'
+import React from 'react'
 
 interface SelectProps {
     options: Tag[] | undefined

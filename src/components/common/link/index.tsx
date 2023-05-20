@@ -1,6 +1,7 @@
 import { Box, Button, Link } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import React from 'react'
 
 const ButtonLink: React.FC = (): React.ReactElement => {
     const navigate = useNavigate()

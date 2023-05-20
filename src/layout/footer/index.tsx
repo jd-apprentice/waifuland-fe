@@ -1,6 +1,7 @@
 import { DiGithubAlt } from 'react-icons/di'
 import { Box, Text } from '@chakra-ui/react'
 import { IconButtonCustom } from '../../components/common/iconButton'
+import React from 'react'
 
 const Footer: React.FC = (): React.ReactElement => {
     return (

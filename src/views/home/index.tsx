@@ -3,6 +3,7 @@ import DefaultLayout from '../../layout/index'
 import { useEffect, useState } from 'react'
 import api from '../../services/base/api'
 import { useCheckToken } from '../../hooks/checkToken'
+import React from 'react'
 
 export const Home: React.FC = (): React.ReactElement => {
     const [waifu, setWaifu] = useState<string | undefined>()

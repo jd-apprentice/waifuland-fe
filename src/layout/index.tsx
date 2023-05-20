@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useCheckToken } from '../hooks/checkToken'
 import Footer from '../layout/footer'
 import Header from '../layout/header'

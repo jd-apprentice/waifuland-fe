@@ -9,6 +9,7 @@ import {
     Avatar,
     Skeleton,
 } from '@chakra-ui/react'
+import React from 'react'
 
 interface MenuProps {
     src?: string

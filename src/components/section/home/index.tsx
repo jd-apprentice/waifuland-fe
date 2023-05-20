@@ -5,6 +5,7 @@ import { homeText } from '../../../const'
 import { IMainProps } from '../../../models/types'
 import { ImageStyle } from './styles'
 import ButtonLink from '../../../components/common/link'
+import React from 'react'
 
 /**
  * @descriptions The home screen of the application with an image and some text

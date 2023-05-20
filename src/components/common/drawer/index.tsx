@@ -15,6 +15,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { DiGithubAlt } from 'react-icons/di'
 import { IconButtonCustom } from '../iconButton'
+import React from 'react'
 
 const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
     isLogged,

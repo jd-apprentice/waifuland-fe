@@ -11,19 +11,11 @@ export default defineConfig({
         viteTsconfigPaths(),
         svgrPlugin(),
     ],
-    resolve: {
-        alias: [
-            { find: /^~/, replacement: '' },
-            {
-                find: '@',
-                replacement: path.resolve(__dirname, 'src'),
-            },
-        ],
-    },
     build: {
         outDir: 'dist',
     },
     server: {
+        open: true,
         host: true,
         port: 3500,
     },

@@ -4,6 +4,7 @@ import SimpleDrawer from '../../components/common/drawer'
 import { MenuProfile } from '../../components/common/menu'
 import { useCheckToken } from '../../hooks/checkToken'
 import { useLogout } from '../../hooks/logout'
+import React from 'react'
 
 interface ImageProps {
     src?: string
