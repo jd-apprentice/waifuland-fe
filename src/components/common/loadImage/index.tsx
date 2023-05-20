@@ -1,6 +1,5 @@
-import { Tooltip, Button, Icon, Box } from "@chakra-ui/react";
-import { AiOutlineReload } from "react-icons/ai";
-
+import { Tooltip, Button, Icon, Box } from '@chakra-ui/react'
+import { AiOutlineReload } from 'react-icons/ai'
 
 /**
  * @description Spinner icon that when clicked will download a new image from the server
@@ -17,7 +16,7 @@ export const LoadImage: React.FC<{ onClick: (() => void) | undefined }> = ({
         <Box
             display="flex"
             justifyContent="center"
-            fontSize={{ base: "lg", lg: "3xl" }}
+            fontSize={{ base: 'lg', lg: '3xl' }}
         >
             <Tooltip hasArrow label="Load a new image">
                 <Button
@@ -30,5 +29,5 @@ export const LoadImage: React.FC<{ onClick: (() => void) | undefined }> = ({
                 </Button>
             </Tooltip>
         </Box>
-    );
-};
+    )
+}

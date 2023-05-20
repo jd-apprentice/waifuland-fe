@@ -3,7 +3,9 @@ WORKDIR /tmp/app
 COPY package*.json ./
 RUN NODE_ENV=development npm i
 COPY src ./src
+COPY public ./public
 COPY tsconfig.json .
+COPY vite.config.ts .
 COPY index.html .
 RUN npm run build
 
@@ -14,4 +16,4 @@ RUN npm i --omit=dev
 COPY --from=build-runner /tmp/app/dist ./dist
 RUN npm i -g serve
 EXPOSE 3500
-CMD [ "serve", "-s", "dist", "-l", "3500"]
+CMD ["serve", "-s", "dist", "-l", "3500"]

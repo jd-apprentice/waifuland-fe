@@ -3,9 +3,8 @@
 interface ImportMetaEnv {
     readonly VITE_BASEURL: string
     readonly VITE_VITE_PORT: number
-  }
-  
-  interface ImportMeta {
+}
+
+interface ImportMeta {
     readonly env: ImportMetaEnv
-  }
-  
+}

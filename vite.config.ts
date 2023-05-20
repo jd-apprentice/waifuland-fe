@@ -5,7 +5,11 @@ import svgrPlugin from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react({ jsxRuntime: "classic" }), viteTsconfigPaths(), svgrPlugin()],
+    plugins: [
+        react({ jsxRuntime: 'classic' }),
+        viteTsconfigPaths(),
+        svgrPlugin(),
+    ],
     esbuild: {
         jsxInject: `import * as React from 'react'`,
     },
@@ -13,7 +17,7 @@ export default defineConfig({
         outDir: 'dist',
     },
     server: {
-        host: "0.0.0.0",
+        host: true,
         port: 3500,
     },
     preview: {

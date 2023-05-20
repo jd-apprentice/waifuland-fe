@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, DocsView, ImagesView, LoginView, AccountView } from "./views";
-import "./styles.css";
-import "./i18n/config";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Home, DocsView, ImagesView, LoginView, AccountView } from './views'
+import './styles.css'
+import './i18n/config'
 
 const App = () => {
     return (
@@ -15,7 +15,7 @@ const App = () => {
                 <Route path="*" element={<div>Not Found</div>} />
             </Routes>
         </BrowserRouter>
-    );
-};
+    )
+}
 
-export default App;
+export default App

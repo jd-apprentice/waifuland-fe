@@ -11,25 +11,25 @@ import {
     Link,
     DrawerFooter,
     Box,
-} from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { DiGithubAlt } from "react-icons/di";
-import { IconButtonCustom } from "../iconButton";
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { DiGithubAlt } from 'react-icons/di'
+import { IconButtonCustom } from '../iconButton'
 
 const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
     isLogged,
 }: {
     isLogged: boolean
 }): React.ReactElement => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <>
-            <Box visibility={isLogged ? "visible" : "hidden"}>
+            <Box visibility={isLogged ? 'visible' : 'hidden'}>
                 <IconButton
                     onClick={onOpen}
                     icon={<HamburgerIcon />}
-                    aria-label={"Menu"}
+                    aria-label={'Menu'}
                 />
             </Box>
             <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -58,7 +58,7 @@ const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
                 </DrawerContent>
             </Drawer>
         </>
-    );
-};
+    )
+}
 
-export default SimpleDrawer;
+export default SimpleDrawer

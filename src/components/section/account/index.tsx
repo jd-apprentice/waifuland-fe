@@ -1,10 +1,9 @@
-import { Box, Center, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import { baseProfilePicture } from "../../../const";
-import { AccountProps } from "../../../models/types";
-import { SubmitButton } from "../../common/button";
-import { BasicInput } from "../../common/input";
-
+import { Box, Center, Text } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
+import { baseProfilePicture } from '../../../const'
+import { AccountProps } from '../../../models/types'
+import { SubmitButton } from '../../common/button'
+import { BasicInput } from '../../common/input'
 
 export const Account = ({ onChange, onClick, picture }: AccountProps) => {
     return (
@@ -29,5 +28,5 @@ export const Account = ({ onChange, onClick, picture }: AccountProps) => {
                 <SubmitButton onClick={onClick} color="red.200" text="Save" />
             </Center>
         </Box>
-    );
-};
+    )
+}

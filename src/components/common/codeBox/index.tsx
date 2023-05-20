@@ -1,6 +1,5 @@
-import { Text, Code } from "@chakra-ui/react";
-import { CodeBoxProps } from "../../../models/types";
-
+import { Text, Code } from '@chakra-ui/react'
+import { CodeBoxProps } from '../../../models/types'
 
 /**
  * @description Creates a component for displaying Text and Code boxes in the documentation
@@ -19,5 +18,5 @@ export const CodeBox: React.FC<CodeBoxProps> = ({
         <Text m={2}>
             <Code>{method.toUpperCase()}</Code> {text} <Code>{endpoint}</Code>
         </Text>
-    );
-};
+    )
+}

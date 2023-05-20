@@ -1,1 +1,1 @@
-import "react-i18next";
+import 'react-i18next'

@@ -2,7 +2,7 @@
  * The base url of the api.
  */
 
-const BASE_URL = import.meta.env.VITE_BASEURL;
+const BASE_URL = import.meta.env.VITE_BASEURL
 
 /**
  * The options used to configure the API.
@@ -25,4 +25,4 @@ export interface ApiConfig {
 export const DEFAULT_API_CONFIG: ApiConfig = {
     url: BASE_URL,
     timeout: 10000,
-};
+}

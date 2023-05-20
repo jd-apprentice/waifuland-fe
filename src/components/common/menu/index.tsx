@@ -8,8 +8,7 @@ import {
     MenuDivider,
     Avatar,
     Skeleton,
-} from "@chakra-ui/react";
-
+} from '@chakra-ui/react'
 
 interface MenuProps {
     src?: string
@@ -21,9 +20,9 @@ interface MenuProps {
 }
 
 export const MenuProfile: React.FC<MenuProps> = ({
-    src = "",
-    name = "Waifuland",
-    color = "red.200",
+    src = '',
+    name = 'Waifuland',
+    color = 'red.200',
     isLogged,
     onLogout,
     onMyAccount,
@@ -31,7 +30,7 @@ export const MenuProfile: React.FC<MenuProps> = ({
     return (
         <Menu>
             <MenuButton as={Button} colorScheme={color}>
-                {src === "" ? (
+                {src === '' ? (
                     <Skeleton border="1px" borderRadius="full">
                         <Avatar src={src} name={name} />
                     </Skeleton>
@@ -55,5 +54,5 @@ export const MenuProfile: React.FC<MenuProps> = ({
                 <></>
             )}
         </Menu>
-    );
-};
+    )
+}

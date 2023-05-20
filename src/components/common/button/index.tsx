@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button } from '@chakra-ui/react'
 
 interface ButtonProps {
     text: string
@@ -10,9 +10,9 @@ interface ButtonProps {
 }
 
 export const SubmitButton: React.FC<ButtonProps> = ({
-    color = "teal",
-    variant = "outline",
-    loadingText = "Loading...",
+    color = 'teal',
+    variant = 'outline',
+    loadingText = 'Loading...',
     isLoading,
     text,
     onClick,
@@ -31,5 +31,5 @@ export const SubmitButton: React.FC<ButtonProps> = ({
         >
             {text}
         </Button>
-    );
-};
+    )
+}

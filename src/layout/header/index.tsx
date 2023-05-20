@@ -1,9 +1,9 @@
-import { Box, Link, Text } from "@chakra-ui/react";
-import { useLocation } from "react-router-dom";
-import SimpleDrawer from "../../components/common/drawer";
-import { MenuProfile } from "../../components/common/menu";
-import { useCheckToken } from "../../hooks/checkToken";
-import { useLogout } from "../../hooks/logout";
+import { Box, Link, Text } from '@chakra-ui/react'
+import { useLocation } from 'react-router-dom'
+import SimpleDrawer from '../../components/common/drawer'
+import { MenuProfile } from '../../components/common/menu'
+import { useCheckToken } from '../../hooks/checkToken'
+import { useLogout } from '../../hooks/logout'
 
 interface ImageProps {
     src?: string
@@ -13,9 +13,9 @@ interface ImageProps {
 const Header: React.FC<ImageProps> = ({
     src,
 }: ImageProps): React.ReactElement => {
-    const { pathname } = useLocation();
-    const isHome = pathname === "/" || pathname === "/login" ? undefined : "/";
-    const behaviorCursor = !isHome ? "default" : "pointer";
+    const { pathname } = useLocation()
+    const isHome = pathname === '/' || pathname === '/login' ? undefined : '/'
+    const behaviorCursor = !isHome ? 'default' : 'pointer'
 
     return (
         <Box
@@ -37,18 +37,18 @@ const Header: React.FC<ImageProps> = ({
                 <MenuProfile
                     src={src}
                     onMyAccount={() =>
-                        pathname === "/account"
+                        pathname === '/account'
                             ? undefined
-                            : window.location.replace("/account")
+                            : window.location.replace('/account')
                     }
                     onLogout={() =>
-                        useLogout() ? window.location.replace("/login") : false
+                        useLogout() ? window.location.replace('/login') : false
                     }
                     isLogged={useCheckToken()}
                 />
             </Box>
         </Box>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

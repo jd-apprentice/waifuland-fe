@@ -1,5 +1,5 @@
-import { Icon, Link } from "@chakra-ui/react";
-import { IconType } from "react-icons";
+import { Icon, Link } from '@chakra-ui/react'
+import { IconType } from 'react-icons'
 
 interface IconButtonProps {
     link: string
@@ -13,17 +13,17 @@ export const IconButtonCustom: React.FC<IconButtonProps> = ({
     padding,
 }: IconButtonProps): React.ReactElement<IconButtonProps> => {
     return (
-        <Link alignItems="center" target={"_blank"} href={link}>
+        <Link alignItems="center" target={'_blank'} href={link}>
             <Icon
                 p={padding}
                 border="1px"
                 borderRadius="full"
                 color="gray.700"
                 backgroundColor="red.200"
-                fontSize={{ base: "40px" }}
+                fontSize={{ base: '40px' }}
                 m={1}
                 as={icon}
             />
         </Link>
-    );
-};
+    )
+}

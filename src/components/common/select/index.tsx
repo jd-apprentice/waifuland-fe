@@ -1,6 +1,5 @@
-import { Select, Box } from "@chakra-ui/react";
-import { Tag } from "../../../models/types";
-
+import { Select, Box } from '@chakra-ui/react'
+import { Tag } from '../../../models/types'
 
 interface SelectProps {
     options: Tag[] | undefined
@@ -19,7 +18,7 @@ const SelectBox = ({ options, onChange }: SelectProps) => {
                     ))}
             </Select>
         </Box>
-    );
-};
+    )
+}
 
-export default SelectBox;
+export default SelectBox

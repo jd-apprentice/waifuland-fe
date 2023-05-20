@@ -5,11 +5,11 @@ import {
     FormErrorMessage,
     FormHelperText,
     FormLabel,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { LoginProps } from "../../../models/types";
-import { SubmitButton } from "../../common/button";
-import { PasswordInput, BasicInput } from "../../common/input";
+} from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
+import { LoginProps } from '../../../models/types'
+import { SubmitButton } from '../../common/button'
+import { PasswordInput, BasicInput } from '../../common/input'
 
 /**
  * @description This is a component that renders a login form.
@@ -20,20 +20,20 @@ import { PasswordInput, BasicInput } from "../../common/input";
  */
 
 export const Login = ({
-    user = "",
-    pass = "",
+    user = '',
+    pass = '',
     onSubmit,
     onChange,
     onClick,
     hasErrors,
     responseError,
 }: LoginProps): React.ReactElement<LoginProps> => {
-    const [password, setPassword] = useState<string>(user);
-    const [username, setUsername] = useState<string>(pass);
+    const [password, setPassword] = useState<string>(user)
+    const [username, setUsername] = useState<string>(pass)
 
     useEffect(() => {
-        onChange(username, password);
-    }, [username, password]);
+        onChange(username, password)
+    }, [username, password])
 
     return (
         <Box
@@ -43,7 +43,7 @@ export const Login = ({
             borderRadius="initial"
         >
             <FormControl
-                w={{ base: "100%", md: "50%", lg: "30%" }}
+                w={{ base: '100%', md: '50%', lg: '30%' }}
                 m={10}
                 isInvalid={hasErrors}
                 textAlign="center"
@@ -84,5 +84,5 @@ export const Login = ({
                 )}
             </FormControl>
         </Box>
-    );
-};
+    )
+}

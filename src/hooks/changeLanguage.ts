@@ -1,5 +1,5 @@
-import { TFunction } from "i18next";
-import { useTranslation } from "react-i18next";
+import { TFunction } from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 /**
  * @description Changes the language of the application to the specified language
@@ -8,6 +8,6 @@ import { useTranslation } from "react-i18next";
  */
 
 export const useChangeLanguage = (lng: string): Promise<TFunction> => {
-    const { i18n } = useTranslation();
-    return i18n.changeLanguage(lng);
-};
+    const { i18n } = useTranslation()
+    return i18n.changeLanguage(lng)
+}

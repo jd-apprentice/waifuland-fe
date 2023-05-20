@@ -74,10 +74,10 @@ export interface AccountProps {
 }
 
 export interface AppConfig {
-    baseUrl: string;
-    port: number;
+    baseUrl: string
+    port: number
 }
-  
+
 export interface AppProps {
-    config?: AppConfig;
+    config?: AppConfig
 }

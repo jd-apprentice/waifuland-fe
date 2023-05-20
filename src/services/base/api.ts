@@ -1,7 +1,7 @@
-import { ApisauceInstance, create } from "apisauce";
-import { ApiConfig, DEFAULT_API_CONFIG } from "./apiConfig";
-import { WaifuApi } from "../waifu";
-import { UserApi } from "../user";
+import { ApisauceInstance, create } from 'apisauce'
+import { ApiConfig, DEFAULT_API_CONFIG } from './apiConfig'
+import { WaifuApi } from '../waifu'
+import { UserApi } from '../user'
 
 /**
  * Manages all requests to the API.
@@ -10,18 +10,18 @@ export class Api {
     /**
      * The underlying apisauce instance which performs the requests.
      */
-    apisauce!: ApisauceInstance;
+    apisauce!: ApisauceInstance
 
     /**
      * @param token The token to use for authentication.
      */
 
-    token!: string;
+    token!: string
 
     /**
      * Configurable options.
      */
-    config: ApiConfig;
+    config: ApiConfig
 
     /**
      * Creates the api.
@@ -29,7 +29,7 @@ export class Api {
      * @param config The configuration to use.
      */
     constructor(config: ApiConfig = DEFAULT_API_CONFIG) {
-        this.config = config;
+        this.config = config
     }
 
     /**
@@ -37,8 +37,8 @@ export class Api {
      */
 
     removeToken() {
-        this.apisauce.deleteHeader("Authorization");
-        api.api.apisauce.headers.Authorization = "";
+        this.apisauce.deleteHeader('Authorization')
+        api.api.apisauce.headers.Authorization = ''
     }
 
     /**
@@ -47,8 +47,8 @@ export class Api {
      */
 
     setToken(token: string) {
-        this.apisauce.setHeader("Authorization", "Bearer " + token);
-        api.api.apisauce.headers.Authorization = `Bearer ${token}`;
+        this.apisauce.setHeader('Authorization', 'Bearer ' + token)
+        api.api.apisauce.headers.Authorization = `Bearer ${token}`
     }
 
     /**
@@ -63,16 +63,16 @@ export class Api {
         this.apisauce = create({
             baseURL: this.config.url,
             timeout: this.config.timeout,
-        });
+        })
     }
 }
 
-const baseApi = new Api();
-baseApi.setup();
+const baseApi = new Api()
+baseApi.setup()
 const api = {
     api: baseApi,
     waifuApi: new WaifuApi(baseApi),
     userApi: new UserApi(baseApi),
-};
+}
 
-export default api;
+export default api

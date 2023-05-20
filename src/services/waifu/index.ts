@@ -1,28 +1,28 @@
-import { ApiResponse } from "apisauce";
-import { Api } from "../base/api";
-import { getGeneralApiProblem } from "../base/apiProblem";
+import { ApiResponse } from 'apisauce'
+import { Api } from '../base/api'
+import { getGeneralApiProblem } from '../base/apiProblem'
 
 export class WaifuApi {
-    private api: Api;
+    private api: Api
 
     constructor(api: Api) {
-        this.api = api;
+        this.api = api
     }
 
     async getWaifu(): Promise<any> {
         try {
             const response: ApiResponse<never> = await this.api.apisauce.get(
-                "/images"
-            );
+                '/images'
+            )
             if (!response.ok) {
-                const problem = getGeneralApiProblem(response);
-                if (problem) return problem;
+                const problem = getGeneralApiProblem(response)
+                if (problem) return problem
             }
 
-            const { data } = response;
-            return data;
+            const { data } = response
+            return data
         } catch (e) {
-            return { kind: "bad-data" };
+            return { kind: 'bad-data' }
         }
     }
 
@@ -36,33 +36,33 @@ export class WaifuApi {
         try {
             const response: ApiResponse<never> = await this.api.apisauce.get(
                 `/images?size=${size}&tag_id=${tag_id}`
-            );
+            )
             if (!response.ok) {
-                const problem = getGeneralApiProblem(response);
-                if (problem) return problem;
+                const problem = getGeneralApiProblem(response)
+                if (problem) return problem
             }
 
-            const { data } = response;
-            return data;
+            const { data } = response
+            return data
         } catch (e) {
-            return { kind: "bad-data" };
+            return { kind: 'bad-data' }
         }
     }
 
     async getTags(): Promise<any> {
         try {
             const response: ApiResponse<never> = await this.api.apisauce.get(
-                "/tags"
-            );
+                '/tags'
+            )
             if (!response.ok) {
-                const problem = getGeneralApiProblem(response);
-                if (problem) return problem;
+                const problem = getGeneralApiProblem(response)
+                if (problem) return problem
             }
 
-            const { data } = response;
-            return data;
+            const { data } = response
+            return data
         } catch (e) {
-            return { kind: "bad-data" };
+            return { kind: 'bad-data' }
         }
     }
 
@@ -70,16 +70,16 @@ export class WaifuApi {
         try {
             const response: ApiResponse<never> = await this.api.apisauce.get(
                 `/tags/${id}`
-            );
+            )
             if (!response.ok) {
-                const problem = getGeneralApiProblem(response);
-                if (problem) return problem;
+                const problem = getGeneralApiProblem(response)
+                if (problem) return problem
             }
 
-            const { data } = response;
-            return data;
+            const { data } = response
+            return data
         } catch (e) {
-            return { kind: "bad-data" };
+            return { kind: 'bad-data' }
         }
     }
 }
