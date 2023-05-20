@@ -11,8 +11,13 @@ export default defineConfig({
         viteTsconfigPaths(),
         svgrPlugin(),
     ],
+    mode: 'production',
     build: {
         outDir: 'dist',
+        sourcemap: true,
+    },
+    esbuild: {
+        jsxInject: `import React from 'react'`,
     },
     server: {
         host: true,
