@@ -21,7 +21,7 @@
         "prebuild": "rm -rf dist",
         "lint": "eslint . --ext .ts,.tsx --fix",
         "prettier": "prettier --write .",
-        "start": "vite",
+        "dev": "vite",
         "build": "tsc && vite build",
         "serve": "vite preview"
     },
