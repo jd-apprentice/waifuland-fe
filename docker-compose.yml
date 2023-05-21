@@ -7,7 +7,7 @@ services:
         env_file:
             - .env
         environment:
-            - VITE_BASEURL=${VITE_BASEURL}
-            - VITE_PORT=${VITE_PORT}
+            - BASEURL=${BASEURL}
+            - PORT=${PORT}
         ports:
             - 3500:3500
