@@ -1,4 +1,7 @@
+/**
+ * @TODO Use environment variables
+ */
 export const config = {
-    baseUrl: import.meta.env.VITE_API_URL,
-    port: import.meta.env.VITE_PORT,
+    baseUrl: "https://waifuland.jonathan.com.ar/api",
+    port: 3500,
 }
