@@ -6,8 +6,5 @@ services:
         restart: always
         env_file:
             - .env
-        environment:
-            - BASEURL=${BASEURL}
-            - PORT=${PORT}
         ports:
             - 3500:3500
