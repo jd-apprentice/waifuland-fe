@@ -13,5 +13,4 @@ FROM node:alpine3.20 as prod-runner
 WORKDIR /app
 COPY --from=build-runner /tmp/app/dist ./dist
 RUN npm i -g serve
-EXPOSE 3500
-CMD ["serve", "-s", "dist", "-l", "3500"]
+CMD ["serve", "-s", "dist", "-l", "4173"]
