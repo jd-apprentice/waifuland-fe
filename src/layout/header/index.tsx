@@ -1,5 +1,5 @@
-import { Box, Link, Text } from '@chakra-ui/react'
-import { useLocation } from 'react-router-dom'
+import { Box, Text } from '@chakra-ui/react'
+import { Link, useLocation } from 'react-router-dom'
 import SimpleDrawer from '../../components/common/drawer'
 import { MenuProfile } from '../../components/common/menu'
 import { useCheckToken } from '../../hooks/checkToken'
@@ -29,8 +29,12 @@ const Header: React.FC<ImageProps> = ({
             p={2}
         >
             <SimpleDrawer isLogged={useCheckToken()} />
-            <Link cursor={behaviorCursor} href={isHome}>
-                <Text color="gray.700" fontSize={{ base: 20 }}>
+            <Link to="/">
+                <Text
+                    cursor={behaviorCursor}
+                    fontSize={{ base: '40px' }}
+                    color="gray.700"
+                >
                     Waifuland
                 </Text>
             </Link>

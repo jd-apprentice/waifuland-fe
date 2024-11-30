@@ -8,7 +8,6 @@ import {
     DrawerBody,
     Text,
     IconButton,
-    Link,
     DrawerFooter,
     Box,
 } from '@chakra-ui/react'
@@ -16,6 +15,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import { DiGithubAlt } from 'react-icons/di'
 import { IconButtonCustom } from '../iconButton'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
     isLogged,
@@ -40,13 +40,13 @@ const SimpleDrawer: React.FC<{ isLogged: boolean }> = ({
                     <DrawerHeader>Waifuland</DrawerHeader>
 
                     <DrawerBody>
-                        <Link href="/">
+                        <Link to="/">
                             <Text>Home</Text>
                         </Link>
-                        <Link href="/docs">
+                        <Link to="/docs">
                             <Text>Documentation</Text>
                         </Link>
-                        <Link href="/images">
+                        <Link to="/images">
                             <Text>Images</Text>
                         </Link>
                     </DrawerBody>
