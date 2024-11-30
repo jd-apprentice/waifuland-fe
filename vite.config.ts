@@ -16,10 +16,10 @@ export default defineConfig({
     },
     server: {
         host: '0.0.0.0',
-        port: 3525,
+        port: 3500,
         open: true,
     },
     preview: {
-        port: 3500,
+        port: 3525,
     },
 })
