@@ -24,9 +24,9 @@ export const Home: React.FC = (): React.ReactElement => {
     }
 
     useEffect(() => {
-        obtainWaifu().then((waifus) => {
-            setWaifu(waifus)
-        })
+        obtainWaifu()
+            .then((waifus) => setWaifu(waifus))
+            .catch((error) => console.log(error))
     }, [])
 
     return (

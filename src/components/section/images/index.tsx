@@ -26,7 +26,7 @@ export const Images = ({ images, tags, onChange }: ImagesProps) => {
                     {images &&
                         images.map(
                             (image: { url: string | undefined }, index) => (
-                                <Box>
+                                <Box key={index}>
                                     <Image
                                         key={index}
                                         objectFit="cover"

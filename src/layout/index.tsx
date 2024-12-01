@@ -17,6 +17,7 @@ const DefaultLayout: React.FC<RouteProps> = ({ route }: RouteProps) => {
                 api.userApi
                     .getUserInfo(token)
                     .then((response) => setUser(response as IUser))
+                    .catch((error) => console.error(error))
             }
         }
     }, [user])

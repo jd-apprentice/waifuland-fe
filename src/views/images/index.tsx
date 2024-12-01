@@ -34,12 +34,13 @@ export const ImagesView = () => {
     }, [api.api.token])
 
     useEffect(() => {
-        obtainTags().then((tag) => {
-            setTags(tag)
-        })
-        obtainWaifu(waifusPerFetch).then((waifus) => {
-            setWaifu(waifus)
-        })
+        obtainTags()
+            .then((tag) => setTags(tag))
+            .catch((error) => console.log(error))
+
+        obtainWaifu(waifusPerFetch)
+            .then((waifus) => setWaifu(waifus))
+            .catch((error) => console.log(error))
     }, [])
 
     return (
@@ -49,9 +50,9 @@ export const ImagesView = () => {
                     onChange={async (e: {
                         target: { value: string | number }
                     }) =>
-                        await obtainWaifu(waifusPerFetch, +e.target.value).then(
-                            (waifus: IImage[]) => setWaifu(waifus)
-                        )
+                        await obtainWaifu(waifusPerFetch, +e.target.value)
+                            .then((waifus: IImage[]) => setWaifu(waifus))
+                            .catch((error) => console.log(error))
                     }
                     tags={tags}
                     images={waifu}

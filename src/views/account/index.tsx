@@ -12,15 +12,17 @@ export const AccountView = () => {
 
     useEffect(() => {
         const isLogged = useCheckToken()
-        if (isLogged) {
-            if (token) {
-                api.userApi
-                    .getUserInfo(token)
-                    .then((response) => setUser(response as IUser))
-            }
-        } else {
+        if (!isLogged) {
             window.location.href = '/login'
         }
+
+        if (token) {
+            api.userApi
+                .getUserInfo(token)
+                .then((response) => setUser(response as IUser))
+                .catch((error) => console.error(error))
+        }
+
     }, [api.api.token, image])
 
     return (
@@ -35,9 +37,8 @@ export const AccountView = () => {
                     onClick={() => {
                         api.userApi
                             .updateUserInfo(user?.id as string, image as File)
-                            .then((response: any) =>
-                                setImage(response?.picture)
-                            )
+                            .then((response: any) => setImage(response?.picture))
+                            .catch((error) => console.error(error))
                     }}
                 />
             }

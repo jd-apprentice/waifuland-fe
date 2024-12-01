@@ -6,7 +6,10 @@ COPY src ./src
 COPY public ./public
 COPY tsconfig.json .
 COPY vite.config.ts .
+COPY .eslintrc.cjs .
 COPY index.html .
+
+RUN npm run lint
 RUN npm run build
 
 FROM node:alpine3.20 as prod-runner

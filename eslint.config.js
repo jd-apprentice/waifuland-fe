@@ -1,4 +1,5 @@
-module.exports = {
+export default [{
+    ignores: ["node_modules/**"],
     env: {
         browser: true,
         es2021: true,
@@ -20,4 +21,4 @@ module.exports = {
         '@typescript-eslint/semi': 1,
     },
     include: ['src/**/*'],
-}
+}]

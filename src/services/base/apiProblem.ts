@@ -48,7 +48,6 @@ export function getGeneralApiProblem(
 ): GeneralApiProblem | void {
     switch (response.problem) {
         case 'CONNECTION_ERROR':
-            return { kind: 'cannot-connect', temporary: true }
         case 'NETWORK_ERROR':
             return { kind: 'cannot-connect', temporary: true }
         case 'TIMEOUT_ERROR':
